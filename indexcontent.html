@@ -2,6 +2,75 @@
  <HEADER ID="Header_Article_1">
 	 <H2>Building IoT Projects</H2>
  </HEADER>
+	<H3>Week 14</H3>
+	<p>
+	Build Log
+	</p>
+	<p>
+	Parts
+	</p>
+	<ul>
+  		<li>Raspberry Pi 3</li>
+  		<li>Mini USB Microphone</li>
+  		<li>Mini Speaker</li>
+		<li>Ethernet Cable</li>
+	</ul>
+	<p>
+	Steps
+	</p>
+	<ol>
+		<li>
+		Power on your Raspberry Pi and connect a USB mouse and keyboard to it. If you do not have either you can connect
+		using VNC server.
+		</li>
+		<li>
+		Connect your USB microphone and speaker to the Pi. 
+		</li>
+		<li>
+		To get the Raspberry Pi to talk we will be using the libraries supplied by Amazon Alexa.
+		</li>
+		<li>
+		first go developer.amazon.com and create a free account. If you already have an Amazon account you can use that.
+		</li>
+		<li>
+		Create a device and security porfile. Remember the 3 following things, ProductID, ClientID, and ClientSecret
+		</li>
+		<li>
+		In your Raspberry Pi go to terminal and type: 
+		cd Desktop
+		git clone https://github.com/alexa/alexa-avs-sample-app.git
+		</li>
+		<li>
+		move into the created folder and edit the automated_install.sh file. In the file you will see 3 fields to input
+		your ProductID, ClientID, and ClientSecret. Go ahead and enter them in
+		</li>
+		<li>
+		now that that is done you want to install the script, go ahead and run the automated_install.sh file. this should
+		take around 30 minutes or so.
+		</li>
+		<li>
+		To run the script open up 2 terminal windows:
+		Terminal 1:
+		cd ~/Desktop/alexa-avs-sample-app/samples
+		cd companionService && npm start
+		Terminal 2:
+		cd ~/Desktop/alexa-avs-sample-app/samples
+		cd javaclient && mvn exec:exec
+		</li>
+		<li>
+		for the terminal 2 command, a GUI will apear and a prompt will apear asking to open a URL, say yes. After your browser
+		will open, once this happens login in using the account you made at the beginning of the steps
+		</li>
+		<li>
+		after logging in and agreeing to the terms you will be redirected to a web Page saying 
+		"device token ready". after this go back to the GUI and hit OK.
+		</li>
+		<li>
+		now you are ready to talk to the Raspberry Pi, click the listen button and ask a question.
+		</li>
+		
+	</ol> 
+	
 	<H3>Week 13</H3>
 	<a href="Documentation/Speech Buddy slides.pptx" download>
 	presentation slides link

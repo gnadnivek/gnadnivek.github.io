@@ -1,5 +1,10 @@
+SpeechBuddy
+===========
+
+ 
+
 Proposal
-========
+--------
 
 An intelligent voice interface that is able to listen and interpret what the
 user has spoken. Input will be translated into text and stored in a SQL

@@ -1,3 +1,8 @@
+---
+bibliography: RPiCitations.bib
+csl: apa.csl
+---
+
 ![](media/image1.jpeg)
 
 September 14th, 2016
@@ -9,6 +14,7 @@ Kevin Dang
 gnadnivek.github.io
 
 **Executive Summary**
+---------------------
 
 As a student in the Computer Engineering Technology program, I will be
 integrating the knowledge and skills I have learned from our program into this
@@ -30,6 +36,7 @@ integrated together in the subsequent term in CENG 355 Computer Systems Project
 as a member of a 2 or 3 student group.
 
 **Background**
+--------------
 
 The problem solved by this project is that it helps users take simple notes,
 such as a grocery list or small reminders for when you don’t have a pen and
@@ -71,6 +78,7 @@ This knowledge and skill set will enable me to build the subsystems and
 integrate them together as my capstone project.
 
 **Methodology**
+---------------
 
 This proposal is assigned in the first week of class and is due at the beginning
 of class in the second week of the fall semester. My coursework will focus on
@@ -159,6 +167,7 @@ important to start tasks as soon as possible to be able to meet deadlines.
 | **Phase 3 Total**                                                                                                                                                                                                                                                                                                                     | **TBD**        |                                                                                                                                |
 
 **Concluding remarks**
+----------------------
 
 This proposal presents a plan for providing an IoT solution for better planning
 and helps people set reminders of important details. This is an opportunity to
@@ -168,18 +177,6 @@ support projects such as the initiative described by [3]. I request approval of
 this project.
 
 **References**
+--------------
 
-[1] Institute of Electrical and Electronics Engineers. (2015, August 28). IEEE
-Xplore Digital Library [Online]. Available:
-https://ieeexplore.ieee.org/search/advsearch.jsp
-
-[2] Segura-Garcia, J.; Felici-Castell, S.; Perez-Solano, J.J.; Cobos, M.;
-Navarro, J.M., "Low-Cost Alternatives for Urban Noise Nuisance Monitoring Using
-Wireless Sensor Networks," *Sensors Journal, IEEE*, vol.15, no.2, pp.836,844,
-Feb. 2015 doi: 10.1109/JSEN.2014.2356342
-
-[3] Creatron. (2015, August 28). Part Number: RASPI-004499 [Online]. Available:
-https://www.creatroninc.com/product/raspberry-pi-2-media-starter-kit/
-
-[4] Upton, Liz. (2015, August 28). Raspberry Pi colocation [Online]. Available:
-http://raspberrycolocation.com/
+ 

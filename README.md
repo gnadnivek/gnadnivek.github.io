@@ -1,6 +1,6 @@
 ---
-bibliography: RPiCitations.bib
 csl: apa.csl
+bibliography: RPiCitations.bib
 ---
 
 **SpeechBuddy**
@@ -40,8 +40,8 @@ Similar to Apples Siri and Microsoft’s Cortana.
 **Executive Summary**
 ---------------------
 
-As a student in the Computer Engineering Technology program, I will be
-integrating the knowledge and skills I have learned from our program into this
+As students in the Computer Engineering Technology program, we will be
+integrating the knowledge and skills we have learned from our program into this
 Internet of Things themed capstone project. This proposal requests the approval
 to build the hardware portion that will connect to a database as well as to a
 mobile device application. The internet connected hardware will include a custom
@@ -49,15 +49,12 @@ PCB with sensors and actuators for *speech recognition and voice recording*. The
 database will store *what the user says in a readable format saved on a
 database*. The mobile device functionality will include *storage for the
 recorded text and any reminders* and will be further detailed in the mobile
-application proposal. I will be collaborating with the following
-company/department, *I will not be collaborating with any companies at this
-moment*. In the winter semester I plan to form a group with the following
-students, who are also building similar hardware this term and working on the
-mobile application with me *Sanjay Jerad, and William Anderson*. The hardware
-will be completed in CENG 317 Hardware Production Techniques independently and
-the application will be completed in CENG 319 Software Project. These will be
-integrated together in the subsequent term in CENG 355 Computer Systems Project
-as a member of a 2 or 3 student group.
+application proposal. we will be collaborating with the following
+company/department, *we will not be collaborating with any companies at this
+moment*. The hardware will be completed in CENG 317 Hardware Production
+Techniques independently and the application will be completed in CENG 319
+Software Project. These will be integrated together in the subsequent term in
+CENG 355 Computer Systems Project.
 
 **Background**
 --------------
@@ -76,7 +73,7 @@ on the computer. In this era there is not much mention of using a person’s voi
 as input, and has not been a part a person’s daily lives. You don’t see people
 talking to their phone or microphone everywhere you look.
 
-I have searched for prior art via Humber’s IEEE subscription selecting “My
+We have searched for prior art via Humber’s IEEE subscription selecting “My
 Subscribed Content”[1] and have found and read [@6894583] which provides insight
 into similar efforts.
 
@@ -134,7 +131,7 @@ The system integration will be completed in the fall term.
 
 *Phase 3 Demonstration to future employers*
 
-This project will showcase the knowledge and skills that I have learned to
+This project will showcase the knowledge and skills that we have learned to
 potential employers.
 
 The tables below provide rough effort and non-labour estimates respectively for

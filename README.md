@@ -8,6 +8,9 @@ csl: apa.csl
 
 Project website <https://gnadnivek.github.io/>
 
+**Table of Contents**
+---------------------
+
 **Proposal**
 ------------
 
@@ -62,8 +65,17 @@ as input, and has not been a part a person’s daily lives. You don’t see peop
 talking to their phone or microphone everywhere you look.
 
 I have searched for prior art via Humber’s IEEE subscription selecting “My
-Subscribed Content”[1] and have found and read [2] which provides insight into
-similar efforts.
+Subscribed Content”[1] and have found and read [@6894583] which provides insight
+into similar efforts.
+
+The first article contains information related to text-to-speech output in
+technology. [@5174430]
+
+The second article’s information is about discriminating between vocal sounds
+and environment sounds. [@7079726]
+
+The third article relates to the behaviour of speech with service robots.
+[@5565459]
 
 In the Computer Engineering Technology program we have learned about the
 following topics from the respective relevant courses:

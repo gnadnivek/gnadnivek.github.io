@@ -11,6 +11,10 @@ Project website <https://gnadnivek.github.io/>
 **Table of Contents**
 ---------------------
 
+1.  [Proposal](#proposal)
+
+2.  [References](#references)
+
 **Proposal**
 ------------
 

@@ -13,7 +13,15 @@ Project website <https://gnadnivek.github.io/>
 
 1.  [Proposal](#proposal)
 
-2.  [References](#references)
+2.  [Executive Summary](#executive-summary)
+
+3.  [Background](#background)
+
+4.  [Methodology](#methodology)
+
+5.  [Concluding Remarks](#concluding-remarks)
+
+6.  [References](#references)
 
 **Proposal**
 ------------

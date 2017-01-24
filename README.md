@@ -1,6 +1,6 @@
 ---
-bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
 csl: "E:/ceng355/week1/final markdown/apa.csl"
+bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
 ---
 
 Software Requirements Specification
@@ -8,6 +8,8 @@ Software Requirements Specification
 
 Speech Buddy
 ------------
+
+[Speech Buddy Github](https://willcodyanderson.github.io/)
 
 Version 1.0 approved
 
@@ -22,7 +24,7 @@ Table of Contents
 
 Table of Contents ii
 
-### 1. [Introduction 1](#introduction) 
+### 1. [Introduction 1](#introduction)
 
 1.1 [Proposal 1](#proposal)
 
@@ -32,7 +34,7 @@ Table of Contents ii
 
 1.4 [Methodology 2](#methodology)
 
-1.5[ Concluding Remarks 7](#concluding-remarks)
+1.5[Concluding Remarks 7](#concluding-remarks)
 
 ### 2. [Database Specifications 8](#database-specifications)
 
@@ -41,17 +43,15 @@ Table of Contents ii
 2.2 [Database Tables 8](#database-tables)
 
 2.3 [Database Alteration via User Case Example
-8](#database-alteration-via-user-ease-example)
-
-2.4 [Database Work Contributions 9](#database-work-contributions)
+8](#database-alteration-via-user-case-example)
 
 ### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
 
-3.1 [GUI Specifications 9](#gUI-specifications)
+3.1 [GUI Specifications 9](#graphical-user-interface-specifications:-activities)
 
 3.2 [Database Integration 10](#database-integration)
 
-3.3 [Sample User Cases 10](#sample-user-cases)
+3.3 [Sample User Cases 10](#user-cases)
 
 3.4 [Application Work Contributions 10](#application-work-contributions)
 
@@ -59,9 +59,9 @@ Table of Contents ii
 
 4.1 [Amazon Voice Services 15](#amazon-voice-services)
 
-4.2 [Firebase Hosting 15](#firebase-hosting)
+4.2 [Firebase Hosting 15](#firebase-database)
 
-5. [References 15](#reference)
+5. [References 15](#references)
 
 Introduction
 ============

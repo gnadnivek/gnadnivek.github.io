@@ -47,7 +47,7 @@ Table of Contents ii
 
 ### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
 
-3.1[ GUI Specifications 9](#Graphical-User-Interface-Specifications:-Activities)
+3.1[ GUI Specifications 9](#graphical-user-interface-specifications)
 
 3.2 [Database Integration 10](#database-integration)
 
@@ -308,8 +308,8 @@ in a new row under the ListNames table.
 Mobile Application Specifications
 =================================
 
-Graphical User Interface Specifications: Activities
----------------------------------------------------
+Graphical User Interface Specifications
+---------------------------------------
 
 **Login Activity:** The login screen of the application is the first presented
 upon launching the application. The user may enter already existing credentials

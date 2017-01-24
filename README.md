@@ -61,7 +61,7 @@ Table of Contents ii
 
 4.2 [Firebase Hosting 15](#firebase-database)
 
-5. [References 15](#references)
+5 [References 15](#references)
 
 Introduction
 ============

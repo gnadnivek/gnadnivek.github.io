@@ -43,7 +43,7 @@ Table of Contents ii
 2.2 [Database Tables 8](#database-tables)
 
 2.3 [Database Alteration via User Case Example
-8](#database-alteration-via-user-case-example)
+8](#database-alteration-via-user-case-examples)
 
 ### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
 

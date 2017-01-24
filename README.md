@@ -47,7 +47,7 @@ Table of Contents ii
 
 ### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
 
-3.1[ GUI Specifications 9](#graphical-user-interface-specifications:-activities)
+3.1[ GUI Specifications 9](#graphical-user-interface-specifications:activities)
 
 3.2 [Database Integration 10](#database-integration)
 

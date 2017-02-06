@@ -1,6 +1,6 @@
 ---
-csl: "E:/ceng355/week1/final markdown/apa.csl"
-bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
+bibliography: ../week1/final markdown/RPiCitations.bib
+csl: ../week1/final markdown/apa.csl
 ---
 
 Software Requirements Specification
@@ -116,42 +116,44 @@ Table of Contents
 
 ### 6. [Introduction ](#introduction)
 
-6.1 [Project Description](#project-description)
+6.1 [Technical Problem](#technical-problem)
 
-6.2 [Problem Solved](#problem-solved)
+6.2 [Objective](#objective)
 
-6.2 [Background ](#background)
+### 7. [Project Description](#project-description)
 
-6.3 [Methodology ](#methodology)
+7.0.1 [Methodology/Schedule](#methodology/Schedule)
 
-6.4 [Concluding Remarks ](#concluding-remarks)
+7.0.2 [Concluding Remarks ](#concluding-remarks)
 
-### 7. [Database Specifications ](#database-specifications)
+### 7.1 [Database Specifications ](#database-specifications)
 
-7.1 [Database Type ](#database-type)
+7.1.1 [Database Type ](#database-type)
 
-7.2 [Database Tables ](#database-tables)
+7.1.2 [Database Tables ](#database-tables)
 
-7.3 [Database Alteration via User Case Example
+7.1.3 [Database Alteration via User Case Example
 ](#database-alteration-via-user-case-examples)
 
-### 8. [Mobile Application Specifications ](#mobile-application-specifications)
+### 7.2. [Mobile Application Specifications ](#mobile-application-specifications)
 
-8.1[GUI Specifications ](#graphical-user-interface-specifications)
+7.2.1 [GUI Specifications ](#graphical-user-interface-specifications)
 
-8.2 [Database Integration ](#database-integration)
+7.2.2 [Database Integration ](#database-integration)
 
-8.3 [Sample User Cases ](#user-cases)
+7.2.3 [Sample User Cases ](#user-cases)
 
-8.4 [Application Work Contributions ](#application-work-contributions)
+7.2.4 [Application Work Contributions ](#application-work-contributions)
 
-### 9. [Additional Web Specifications](#additional-web-specifications)
+### 7.3. [Additional Web Specifications](#additional-web-specifications)
 
-9.1 [Amazon Voice Services](#amazon-voice-services)
+7.3.1 [Amazon Voice Services](#amazon-voice-services)
 
-9.2 [Firebase Hosting](#firebase-database)
+7.3.2 [Firebase Hosting](#firebase-database)
 
-### 10 [References](#references)
+### 8. [Conclusion](#conclusion)
+
+### 9. [References](#references)
 
 Illustrations and Diagrams
 ==========================
@@ -607,7 +609,8 @@ back-end development including Java and using libraries and API’s. He manages
 the overall architecture and functionality of the project.
 
 **Sanjay:** In charge of the Graphical User Interface and User experience.
-Designs layouts and recommends functionality to William to be implemented.
+Different Graphical interfaces for both mobile phones and tablets. Designs
+layouts and recommends functionality to William to be implemented.
 
 **Kevin:** In charge of data storage, manipulation and maintenance. Created the
 Firebase database, as well as its internal structure and breakdown to be

@@ -98,7 +98,7 @@ the list the user created via voice input.
 Table of Contents
 =================
 
-### 1. [Declaration of Sole Authorship](#declaration-of-sole-authorship)
+### 1. [Declaration of Sole Authorship](#declaration-of-joint-authorship)
 
 ### 2. [Proposal](#proposal)
 
@@ -112,7 +112,7 @@ Table of Contents
 
 ### 4. [Table of Contents](#table-of-contents)
 
-### [5. Illustrations and Diagrams](#illustrations-and-diagrams)
+### 5. [Illustrations and Diagrams](#illustrations-and-diagrams)
 
 ### 6. [Introduction ](#introduction)
 
@@ -122,7 +122,7 @@ Table of Contents
 
 ### 7. [Project Description](#project-description)
 
-7.0.1 [Methodology/Schedule](#methodology/Schedule)
+7.0.1 [Methodology/Schedule](#methodology-and-schedule)
 
 7.0.2 [Concluding Remarks ](#concluding-remarks)
 
@@ -225,8 +225,8 @@ technology in an effort to help them.
 Project Description
 ===================
 
-Methodology/Schedule
---------------------
+Methodology and Schedule
+------------------------
 
 Phase 1 Hardware build.  
 Phase 2 System integration.  

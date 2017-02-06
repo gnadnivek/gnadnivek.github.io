@@ -61,6 +61,25 @@ text format.
 
 Similar to Apples Siri and Microsoft’s Cortana.
 
+Description
+-----------
+
+As students in the Computer Engineering Technology program, we will be
+integrating the knowledge and skills we have learned from our program into this
+Internet of Things themed capstone project. This proposal requests the approval
+to build the hardware portion that will connect to a Database as well as to a
+mobile device application. The internet connected hardware will include a custom
+PCB with sensors and actuators for *speech recognition and voice recording*. The
+Database will store *what the user says in a readable format saved on a
+Database*. The mobile device functionality will include *storage for the
+recorded text and any reminders* and will be further detailed in the mobile
+application proposal. we will be collaborating with the following
+company/department, *we will not be collaborating with any companies at this
+moment*. The hardware will be completed in CENG 317 Hardware Production
+Techniques independently and the application will be completed in CENG 319
+Software Project. These will be integrated together in the subsequent term in
+CENG 355 Computer Systems Project.
+
 Abstract
 ========
 
@@ -83,15 +102,23 @@ Table of Contents
 
 ### 2. [Proposal](#proposal)
 
+2.1 [Summary](#summary)
+
+2.2 [Problem](#problem)
+
+2.3 [Description](#description)
+
 ### 3. [Abstract](#abstract)
 
 ### 4. [Table of Contents](#table-of-contents)
 
-1.  [Illustrations and Diagrams](#illustrations-and-diagrams)
+### [5. Illustrations and Diagrams](#illustrations-and-diagrams)
 
 ### 6. [Introduction ](#introduction)
 
-6.1 [Executive Summary ](#executive-summary)
+6.1 [Project Description](#project-description)
+
+6.2 [Problem Solved](#problem-solved)
 
 6.2 [Background ](#background)
 
@@ -132,27 +159,8 @@ Illustrations and Diagrams
 Introduction
 ============
 
-Project Description
--------------------
-
-As students in the Computer Engineering Technology program, we will be
-integrating the knowledge and skills we have learned from our program into this
-Internet of Things themed capstone project. This proposal requests the approval
-to build the hardware portion that will connect to a Database as well as to a
-mobile device application. The internet connected hardware will include a custom
-PCB with sensors and actuators for *speech recognition and voice recording*. The
-Database will store *what the user says in a readable format saved on a
-Database*. The mobile device functionality will include *storage for the
-recorded text and any reminders* and will be further detailed in the mobile
-application proposal. we will be collaborating with the following
-company/department, *we will not be collaborating with any companies at this
-moment*. The hardware will be completed in CENG 317 Hardware Production
-Techniques independently and the application will be completed in CENG 319
-Software Project. These will be integrated together in the subsequent term in
-CENG 355 Computer Systems Project.
-
-Problem
--------
+Technical Problem
+-----------------
 
 The problem solved by this project is that it helps users take simple notes,
 such as a grocery list or small reminders for when you don’t have a pen and
@@ -201,6 +209,16 @@ following topics from the respective relevant courses:
 
 This knowledge and skill set will enable me to build the subsystems and
 integrate them together as my capstone project.
+
+Objective
+---------
+
+The objective of this project is to create a usable voice interface that will
+help people with organization and planning. In this current age of time a mobile
+phone is carried everywhere and used 24/7. We want to utilize this aspect to
+create a unique interface with a virtual voice to help others in planning. If a
+piece of technology is with people the majority of the time, why not use that
+technology in an effort to help them.
 
 Project Description
 ===================
@@ -611,6 +629,9 @@ make use of the libraries to connect to the external Firebase database.
 The Speech Buddy Hardware and application will be utilizing Firebase databases
 for data storage. The service offers free (to a certain amount of traffic) data
 hosting and an appropriate size and speed for Speech Buddy’s Requirements.
+
+Conclusion
+==========
 
 References
 ==========

@@ -1,7 +1,11 @@
 ---
-bibliography: ../week1/final markdown/RPiCitations.bib
 csl: ../week1/final markdown/apa.csl
+bibliography: ../week1/final markdown/RPiCitations.bib
+title: "Software Requirements Specification: Speech Buddy"
+author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
+
+\pagebreak
 
 Software Requirements Specification
 ===================================
@@ -114,7 +118,7 @@ Table of Contents
 
 ### 5. [Illustrations and Diagrams](#illustrations-and-diagrams)
 
-### 6. [Introduction ](#introduction)
+### 6. [Introduction](#introduction)
 
 6.1 [Technical Problem](#technical-problem)
 
@@ -124,26 +128,26 @@ Table of Contents
 
 7.0.1 [Methodology/Schedule](#methodology-and-schedule)
 
-7.0.2 [Concluding Remarks ](#concluding-remarks)
+7.0.2 [Concluding Remarks](#concluding-remarks)
 
-### 7.1 [Database Specifications ](#database-specifications)
+### 7.1 [Database Specifications](#database-specifications)
 
-7.1.1 [Database Type ](#database-type)
+7.1.1 [Database Type](#database-type)
 
-7.1.2 [Database Tables ](#database-tables)
+7.1.2 [Database Tables](#database-tables)
 
-7.1.3 [Database Alteration via User Case Example
-](#database-alteration-via-user-case-examples)
+7.1.3 [Database Alteration via User Case
+Example](#database-alteration-via-user-case-examples)
 
-### 7.2. [Mobile Application Specifications ](#mobile-application-specifications)
+### 7.2. [Mobile Application Specifications](#mobile-application-specifications)
 
-7.2.1 [GUI Specifications ](#graphical-user-interface-specifications)
+7.2.1 [GUI Specifications](#graphical-user-interface-specifications)
 
-7.2.2 [Database Integration ](#database-integration)
+7.2.2 [Database Integration](#database-integration)
 
-7.2.3 [Sample User Cases ](#user-cases)
+7.2.3 [Sample User Cases](#user-cases)
 
-7.2.4 [Application Work Contributions ](#application-work-contributions)
+7.2.4 [Application Work Contributions](#application-work-contributions)
 
 ### 7.3. [Additional Web Specifications](#additional-web-specifications)
 

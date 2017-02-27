@@ -89,6 +89,40 @@ on the computer. In this era there is not much mention of using a person’s voi
 as input, and has not been a part a person’s daily lives. You don’t see people
 talking to their phone or microphone everywhere you look.
 
+We have searched for prior art via Humber’s IEEE subscription selecting “My
+Subscribed Content” and have found and read the below articles, which provides
+insight into similar efforts.
+
+The first article contains information related to text-to-speech output in
+technology. [@5174430]
+
+The second article’s information is about discriminating between vocal sounds
+and environment sounds. [@7079726]
+
+The third article relates to the behaviour of speech with service robots.
+[@5565459]
+
+In the Computer Engineering Technology program we have learned about the
+following topics from the respective relevant courses:
+
+-   Java Docs from CENG 212 Programming Techniques In Java,
+
+-   Construction of circuits from CENG 215 Digital And Interfacing Systems,
+
+-   Rapid application development and Gantt charts from CENG 216 Intro to
+    Software Engineering,
+
+-   Micro computing from CENG 252 Embedded Systems,
+
+-   SQL from CENG 254 Database With Java,
+
+-   Web access of Databases from CENG 256 Internet Scripting; and,
+
+-   Wireless protocols such as 802.11 from TECH152 Telecom Networks.
+
+This knowledge and skill set will enable us to build the subsystems and
+integrate them together as my capstone project.
+
 Methodology and Schedule
 ------------------------
 
@@ -226,9 +260,9 @@ Table of Contents
 
 ### 6. [Introduction](#introduction)
 
-6.1 [Technical Problem](#technical-problem)
+6.1 [Objective](#objective)
 
-6.2 [Objective](#objective)
+6.2 [Technical Problem](#technical-problem)
 
 ### 7. [Project Description](#project-description)
 
@@ -267,49 +301,6 @@ Illustrations and Diagrams
 Introduction
 ============
 
-Technical Problem
------------------
-
-The problem solved by this project is that it helps users take simple notes,
-such as a grocery list or small reminders for when you don’t have a pen and
-paper available. This project will help solved problems where people forget an
-important detail or appointment, by storing what the user says into a readable
-text format.
-
-We have searched for prior art via Humber’s IEEE subscription selecting “My
-Subscribed Content” and have found and read [@6894583] which provides insight
-into similar efforts.
-
-The first article contains information related to text-to-speech output in
-technology. [@5174430]
-
-The second article’s information is about discriminating between vocal sounds
-and environment sounds. [@7079726]
-
-The third article relates to the behaviour of speech with service robots.
-[@5565459]
-
-In the Computer Engineering Technology program we have learned about the
-following topics from the respective relevant courses:
-
--   Java Docs from CENG 212 Programming Techniques In Java,
-
--   Construction of circuits from CENG 215 Digital And Interfacing Systems,
-
--   Rapid application development and Gantt charts from CENG 216 Intro to
-    Software Engineering,
-
--   Micro computing from CENG 252 Embedded Systems,
-
--   SQL from CENG 254 Database With Java,
-
--   Web access of Databases from CENG 256 Internet Scripting; and,
-
--   Wireless protocols such as 802.11 from TECH152 Telecom Networks.
-
-This knowledge and skill set will enable us to build the subsystems and
-integrate them together as my capstone project.
-
 Objective
 ---------
 
@@ -319,6 +310,24 @@ phone is carried everywhere and used 24/7. We want to utilize this aspect to
 create a unique interface with a virtual voice to help others in planning. If a
 piece of technology is with people the majority of the time, why not use that
 technology in an effort to help them.
+
+Technical Problem
+-----------------
+
+The problem solved by this project is that it helps users take simple notes,
+such as a grocery list or small reminders for when you don’t have a pen and
+paper available. This project will help solved problems where people forget an
+important detail or appointment, by storing what the user says into a readable
+text format.
+
+Some problems that were encountered in constructing the Speech Buddy, was trying
+to convert spoken words into text on the Raspberry Pi. We tackled this problem
+by first utilizing the “espeak” library on the Pi. This did not provide enough
+efficiency, until we discovered Amazon’s Alexa voice service. This voice service
+allowed us to create specific tasks for the voice to do, making it easier to
+program speech conversion, and database storage. Another problem was
+connectivity, the Alexa voice service requires internet access, we have a wired
+connection using an Ethernet cable. Portability is a big issue.
 
 Project Description
 ===================

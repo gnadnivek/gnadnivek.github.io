@@ -694,15 +694,55 @@ Ensure you have a fresh copy of Rasbian Jesse installed on your Micro SD card
 for your raspberry pi operating system. Open a terminal on your Pi and type in
 the command "sudo alsamixer". Select Advanced Options, then Audio Options. Set
 to force Output through 3.5mm jack.  
-Speech Buddy uses Amazon Voice Services. Make sure you have an amazon developer
-account before continuing, then follow the voice services installation guide
-provided here:
+Speech Buddy uses Amazon Voice Services (AVS). Make sure you have an amazon
+developer account before continuing, then follow the voice services installation
+guide provided here:
 
 [Amazon Voice Setup
 (](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
 Not install the wake word activation).
 
+To summarize the Amazon Voice Setup:
+
+First login to your amazon developer account and go to “Alexa”. Create a
+security profile and register a product, when completed this will create a
+ProductID, ClientID, and ClientSecret. Remember these values for later.
+Throughout the Voice Setup it will need information for the “web setting” in the
+Security profile. Enter “https://localhost:3000” for the Allowed Origins, and
+“https://localhost:3000/authresponse” for the Allowed Return URLs, under “web
+settings”.
+
+On the Raspberry Pi clone the AVS:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+git clone https://github.com/alexa/alexa-avs-sample-app.git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Navigate the directory created, and edit the “automated\_install.sh” and add the
+ProductID, ClientID, and ClientSecret you got when creating the security
+profile, to the file. Run this file to install AVS on the Pi, this will roughly
+take 30 minutes to install AVS.
+
 ### Power Up and Testing
+
+To Run AVS open two terminals on the Raspberry Pi:
+
+First Terminal enter:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd ~/Desktop/alexa-avs-sample-app/samples
+cd companionService && npm start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Second Terminal enter:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cd ~/Desktop/alexa-avs-sample-app/samples
+cd javaclient && mvn exec:exec
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A Graphical User Interface (GUI) will appear, follow the instructions on the
+GUI.
 
 Run the Software to make speech buddy listen as directed above. Speech Buddy
 will output a basic tone if it is working. It currently has basic capabilities

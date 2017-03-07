@@ -291,6 +291,18 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.2 [Firebase Hosting](#firebase-database)
 
+### 7.4 [Build Instructions](#build-instructions)
+
+7.4.1 [Intro](#intro)
+
+7.4.2 [Build Time](#build-time)
+
+7.4.3 [Mechanical Assembly](#mechanical-assembly)
+
+7.4.4 [Software Setup](#software-setup)
+
+7.4.5 [Power Up and Testing](#power-up-and-testing)
+
 ### 8. [Conclusion](#conclusion)
 
 ### 9. [References](#references)
@@ -331,6 +343,9 @@ connection using an Ethernet cable. Portability is a big issue.
 
 Project Description
 ===================
+
+Build Instructions
+------------------
 
 Database Specifications
 -----------------------
@@ -644,6 +659,56 @@ make use of the libraries to connect to the external Firebase database.
 The Speech Buddy Hardware and application will be utilizing Firebase databases
 for data storage. The service offers free (to a certain amount of traffic) data
 hosting and an appropriate size and speed for Speech Buddy’s Requirements.
+
+Build Instructions
+==================
+
+### Intro
+
+Speech Buddy is a voice interface intended to make storage and manipulation of
+data easier, as well as perform simple various tasks via voice commands. It is
+intended to make simple everyday tasks, such as adding items to your calendar,
+easier, as well as inquiries of online information.
+
+System Diagram:
+
+![](SpeechBuddySystemDiagram.PNG)
+
+### Build Time
+
+Assuming you have to do no research as you are following our pre-made build
+method, The approximate time it will take to build a working Speech Buddy is
+about four to five hours, assuming parts delivery time is not included.
+
+### Mechanical Assembly
+
+Setup your raspberry Pi by following the build instruction included in your kit.
+Connect your external speaker into the pi's 3.5 mm jack and the USB microphone
+into a USB 2.0 slot. Use acrylic cement to bond case together. If you intent to
+put Speech Buddy permanently in it's case, it is important to wire the power
+cord through the designated power slot in the case before sealing the box.
+
+### Software Setup
+
+Ensure you have a fresh copy of Rasbian Jesse installed on your Micro SD card
+for your raspberry pi operating system. Open a terminal on your Pi and type in
+the command "sudo alsamixer". Select Advanced Options, then Audio Options. Set
+to force Output through 3.5mm jack.  
+Speech Buddy uses Amazon Voice Services. Make sure you have an amazon developer
+account before continuing, then follow the voice services installation guide
+provided here:
+
+[Amazon Voice Setup
+(](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
+Not install the wake word activation).
+
+### Power Up and Testing
+
+Run the Software to make speech buddy listen as directed above. Speech Buddy
+will output a basic tone if it is working. It currently has basic capabilities
+such as simple mathematics, google queries, and time and weather updates. Speech
+Buddy's location may be incorrect. Test this by asking the current time or
+weather, and change your location in your amazon profile accordingly.
 
 Conclusion
 ==========

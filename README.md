@@ -5,14 +5,14 @@ title: "Technical Report: Speech Buddy"
 author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
 
+March 28th, 2017
+
 \pagebreak
 
 Speech Buddy Project
 ====================
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
-
-January 3rd, 2017
 
 Declaration of Joint Authorship
 ===============================
@@ -220,6 +220,8 @@ integrate the knowledge and skills developed in our program to create a
 collaborative IoT capstone project demonstrating my ability to learn how to
 support projects. I request approval of this project.
 
+\pagebreak
+
 Abstract
 ========
 
@@ -234,6 +236,8 @@ organization, letting them set info about important details. This project will
 roughly take up to 8 months to complete. Data is stored in an external database
 hosted on Firebase. The android application is a simply structure that displays
 the list the user created via voice input.
+
+\pagebreak
 
 Table of Contents
 =================
@@ -312,6 +316,8 @@ Example](#database-alteration-via-user-case-examples)
 ### 8. [Conclusion](#conclusion)
 
 ### 9. [References](#references)
+
+\pagebreak
 
 Illustrations and Diagrams
 ==========================
@@ -708,7 +714,7 @@ guide provided here:
 (](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
 Not install the wake word activation). why?
 
-Base on the AVS link provided, the set is as follows:
+Base on the AVS link provided, the setup is as follows:
 
 First login to your amazon developer account and go to “Alexa”. Create a
 security profile and register a product, when completed this will create a
@@ -738,15 +744,15 @@ on a blank function. Click on the broken box on the screen and select “Alexa
 Skills Kit” after hit next. Enter the name and description you want to use, they
 are not important. Select “Python 2.7” for the Runtime, this is the coding
 language that the Alexa skill will be using. The actual code of the Speech Buddy
-skill will be location on our website
+skill will be located on our website
 [here](https://github.com/willcodyanderson/willcodyanderson.github.io), copy the
 code into the “Lambda function code” section. Moving onto the next portion is
-setting up the hander and role. Leave the Handler name as is, and choose “Create
-a custom role” for the Role. This will open up a new tab, select “Create a new
-IAM Role” for IAM Role and enter a name for it, there is further setup for this
-but that will be discussed later. After this click allow on the bottom right,
-this will take you back to configuring the function. Skip the Advanced settings
-and hit next, hit Create Function.
+setting up the handler and role. Leave the Handler name as is, and choose
+“Create a custom role” for the Role. This will open up a new tab, select “Create
+a new IAM Role” for IAM Role and enter a name for it, there is further setup for
+this but that will be discussed later. After this click allow on the bottom
+right, this will take you back to configuring the function. Skip the Advanced
+settings and hit next, hit Create Function.
 
 Take note of the ARN on the top right when you finished creating the function.
 this is important for later so remember it. There you go you have created an
@@ -841,6 +847,8 @@ weather, and change your location in your amazon profile accordingly.
 
 Conclusion
 ==========
+
+\pagebreak
 
 References
 ==========

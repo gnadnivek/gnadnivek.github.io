@@ -202,8 +202,8 @@ important to start tasks as soon as possible to be able to meet deadlines.
 | Speaker                                                                                                                                                                                                                                                                                                                               | \\\$28.99        |                                                                                                                                |
 | CENG Parts Kit                                                                                                                                                                                                                                                                                                                        | \\\$110.00       |                                                                                                                                |
 | J206 Parts                                                                                                                                                                                                                                                                                                                            | \\\$40.00        |                                                                                                                                |
-| Project Case                                                                                                                                                                                                                                                                                                                          |                  |                                                                                                                                |
-| **Phase 1 Total**                                                                                                                                                                                                                                                                                                                     | **\>\\\$318.99** |                                                                                                                                |
+| Project Case                                                                                                                                                                                                                                                                                                                          | \\\$13.00        |                                                                                                                                |
+| **Phase 1 Total**                                                                                                                                                                                                                                                                                                                     | **\>\\\$331.99** |                                                                                                                                |
 | **Phase 2**                                                                                                                                                                                                                                                                                                                           |                  |                                                                                                                                |
 | Materials to improve functionality, fit, and finish of project.                                                                                                                                                                                                                                                                       | N/A              |                                                                                                                                |
 | **Phase 2 Total**                                                                                                                                                                                                                                                                                                                     | **TBD**          |                                                                                                                                |
@@ -316,6 +316,8 @@ Example](#database-alteration-via-user-case-examples)
 
 7.4.7 [Power Up and Testing](#power-up-and-testing)
 
+7.4.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+
 ### 8. [Conclusion](#conclusion)
 
 ### 9. [References](#references)
@@ -324,6 +326,16 @@ Example](#database-alteration-via-user-case-examples)
 
 Illustrations and Diagrams
 ==========================
+
+![](speechbuddy.jpg)
+
+The casing of the Speech Buddy, laser cut design can be found on our project
+website.
+
+![](SpeechBuddySystemDiagram.PNG)
+
+System diagram of the project, describing general structure of how Speech Buddy
+works.
 
 \pagebreak
 
@@ -851,6 +863,17 @@ will output a basic tone if it is working. It currently has basic capabilities
 such as simple mathematics, google queries, and time and weather updates. Speech
 Buddy's location may be incorrect. Test this by asking the current time or
 weather, and change your location in your amazon profile accordingly.
+
+### Colour Tutorial Setup
+
+To set up the color skill kit that is provided to you on AWS, login to your
+account, select the Lambda program, and search for “color”. A color skill kit
+should appear. After selecting the skill, follow the steps that were provided to
+make the skill as the previous skill, “IAM”. Once you have completed the steps
+and filled in the required fields that are needed for the intents and the
+utterances; these can be found on [Sanjays GitHub
+page](https://github.com/Sanjay4966/Sanjay4966.github.io), the PDF are
+developer-amazon-com and developer-amazon-web.
 
 \pagebreak
 

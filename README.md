@@ -41,6 +41,8 @@ work used that does not belong to us and respect their proper ownership.
 It is mandatory that all sources of information be acknowledged in the TR.
 Plagiarism is unethical, irresponsible and criminal.
 
+\pagebreak
+
 Proposal
 ========
 
@@ -200,6 +202,7 @@ important to start tasks as soon as possible to be able to meet deadlines.
 | Speaker                                                                                                                                                                                                                                                                                                                               | \\\$28.99        |                                                                                                                                |
 | CENG Parts Kit                                                                                                                                                                                                                                                                                                                        | \\\$110.00       |                                                                                                                                |
 | J206 Parts                                                                                                                                                                                                                                                                                                                            | \\\$40.00        |                                                                                                                                |
+| Project Case                                                                                                                                                                                                                                                                                                                          |                  |                                                                                                                                |
 | **Phase 1 Total**                                                                                                                                                                                                                                                                                                                     | **\>\\\$318.99** |                                                                                                                                |
 | **Phase 2**                                                                                                                                                                                                                                                                                                                           |                  |                                                                                                                                |
 | Materials to improve functionality, fit, and finish of project.                                                                                                                                                                                                                                                                       | N/A              |                                                                                                                                |
@@ -322,6 +325,8 @@ Example](#database-alteration-via-user-case-examples)
 Illustrations and Diagrams
 ==========================
 
+\pagebreak
+
 Introduction
 ============
 
@@ -352,6 +357,8 @@ allowed us to create specific tasks for the voice to do, making it easier to
 program speech conversion, and database storage. Another problem was
 connectivity, the Alexa voice service requires internet access, we have a wired
 connection using an Ethernet cable. Portability is a big issue.
+
+\pagebreak
 
 Project Description
 ===================
@@ -844,6 +851,8 @@ will output a basic tone if it is working. It currently has basic capabilities
 such as simple mathematics, google queries, and time and weather updates. Speech
 Buddy's location may be incorrect. Test this by asking the current time or
 weather, and change your location in your amazon profile accordingly.
+
+\pagebreak
 
 Conclusion
 ==========

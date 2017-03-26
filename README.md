@@ -300,23 +300,41 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.2 [Firebase Hosting](#firebase-database)
 
-### 7.4 [Build Instructions](#build-instructions)
+### 7.4 [Construction](#construction)
 
-7.4.1 [Build Introduction](#build-introduction)
+7.4.1 [Construction Introduction](#construction-introduction)
 
-7.4.2 [Build Time](#build-time)
+7.4.2 [Creating The Database](#creating-the-database)
 
-7.4.3 [Mechanical Assembly](#mechanical-assembly)
+7.4.3 [Alexa Skill](#alexa-skill)
 
-7.4.4 [Software Setup](#software-setup)
+7.4.4 [Adding](#adding)
 
-7.4.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+7.4.5 [Deleting](#deleting)
 
-7.4.6 [Database Setup](#database-setup)
+7.4.6 [Error Checking](#error-dhecking)
 
-7.4.7 [Power Up and Testing](#power-up-and-testing)
+7.4.7 [Project Case](#project-case)
 
-7.4.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+7.4.8 [Android Application](#android-application)
+
+### 7.5 [Build Instructions](#build-instructions)
+
+7.5.1 [Build Introduction](#build-introduction)
+
+7.5.2 [Build Time](#build-time)
+
+7.5.3 [Mechanical Assembly](#mechanical-assembly)
+
+7.5.4 [Software Setup](#software-setup)
+
+7.5.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+
+7.5.6 [Database Setup](#database-setup)
+
+7.5.7 [Power Up and Testing](#power-up-and-testing)
+
+7.5.8 [Colour Tutorial Setup](#colour-tutorial-setup)
 
 ### 8. [Conclusion](#conclusion)
 
@@ -687,6 +705,190 @@ make use of the libraries to connect to the external Firebase database.
 The Speech Buddy Hardware and application will be utilizing Firebase databases
 for data storage. The service offers free (to a certain amount of traffic) data
 hosting and an appropriate size and speed for Speech Buddy’s Requirements.
+
+Construction
+============
+
+### construction Introduction
+
+When working on the speech Buddy project, we planned to incorporate an ability
+to create lists at the users’ request. This functionality in the voice interface
+will allow users to improve their organizational abilities, and help increase
+their planning, as well as scheduling. Throughout the duration of our build, we
+decided to use the Amazon Voice service, Alexa. This service provided the voice
+we needed for speech buddy. This voice service included basic functionally such
+as, being able to get the time, date, google information, by asking questions.
+
+By using Alexa skills we were able to create specific functionalities for the
+speech Buddy. This provided an Integrated Development Environment (IDE) to begin
+coding for the List creating skill.
+
+The data being inputted by the user was kept in external database online, we
+incorporated the Amazon Web Service (AWS), DynamoDB. Using this service with the
+Alexa skill we were creating allowed us to take user voice input, and store
+online.
+
+### Creating the Database
+
+Creating the database was simple on the AWS website, navigating the DynamoDB
+page to create two separate tables. A table called, ListNames with a column for
+the Name. A table called, ItemNames with the columns for, Item name and list
+name. Using a second table with two columns including item name and list name,
+allowed for the minimization of tables we needed. This also allowed us to
+reference different items depending on the list the user placed it in. With this
+we created an external database to house the data users inputted.
+
+### Alexa Skill
+
+On the Amazon Web Services (AWS) we used a service known as, Lambda. This
+service was the foundation of the List creating skill. Providing an Integrated
+Development Environment (IDE) to begin coding. Following a several tutorials
+found online for using the Lambda service we managed to understand and learn how
+to utilize Lambda for our Alexa Skill. The tutorials used are located
+[here](https://github.com/CWolfAnderson/amazon-alexa-with-firebase) and
+[here](https://hackernoon.com/my-first-alexa-custom-skill-6a198d385c84#.w06s23fd6).
+Creating the Lambda Skill was done, but the difficult portion was trying to
+actually installing the Lambda skill on to the Voice service Alexa. Following
+the tutorial we went to our Amazon Developer account to add a skill, this
+required an intent schema and a sample utterances. These two requirements proved
+difficult, needing a complete code to work. For this we used a basic Lambda
+skill that the AWS lambda service provided on the website. Using that sample
+skill we were able to install skills onto the raspberry pi with Alexa.
+
+We started coding the skill using Python. Connection to the database proved
+simple with just 3 lines of code, and adding permissions. Main goal was
+developing code for adding and deleting data in the Dynamo database. Adding and
+deleting codes were done in methods, so they can be easily utilized anywhere in
+the code
+
+### Adding
+
+Code for adding user input required many things. An entire in the intent schema,
+utterances, and code were required. Tutorials mentioned above included sample
+code of adding information into the database. We developed our own Python code
+for adding data using the sample code as a base
+
+Code for adding:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def insert_ListNames(listName):
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('ListNames')
+
+    response = table.put_item(Item={
+            'NameId' : listName
+        })
+    return None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Deleting
+
+The Deleting code was simple after completing the ADDING portion of the code.
+Again requirements in both the intent schema and sample utterances was needed.
+
+Code for Deleting:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def delete_listNames(listName):      
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('ListNames')
+    
+    response = table.delete_item(
+        Key={
+            'NameId' : listName
+        })
+    return None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This code required an entire in intent schema, so the skill was aware when to
+run the ADDING code. The intent schema would run a specific part of the code
+when the user inputs a particular phrase specified on the sample utterances.
+Such as “Speech Buddy add grocery list”
+
+Testing this ADDING code proved successful on the Raspberry Pi as well as on the
+Amazon develop website.
+
+### Error Checking
+
+Main goal of developing ADDING and DELETING code was completed. Error checking
+was next. Developing an error check when adding and deleting in the database was
+needed. The Adding and Deleting methods of code was only to be run, when the
+user specifies input that is actual in the DynamoDB database. If values are not
+found or already exist in the database are found, then error messages will
+appear to let the user know. Error checking code was develop for both the List
+table and the Item table. Code created looks through each table for a specified
+input. And returns a true or false if that input is found or not.
+
+List Error Check:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def check_ListName(listName):
+    
+    checkName = ""
+    nameCount = 0
+    isThere = "false"
+    
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('ListNames')
+    
+    response = table.scan()
+    
+    nameCount == len(response['Items'])
+    for index, item in enumerate(response['Items']):
+        checkName = item['NameId']
+        if checkName == listName :
+            isThere = "true"
+    
+    return isThere
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Item Error Check:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def check_ItemName(itemName):
+    
+    checkName = ""
+    nameCount = 0
+    isThere = "false"
+    
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('ItemName')
+    
+    response = table.scan()
+    
+    nameCount == len(response['Items'])
+    for index, item in enumerate(response['Items']):
+        checkName = item['ItemId']
+        if checkName == itemName :
+            isThere = "true"
+    
+    return isThere
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Project Case
+
+The Speech Buddy contains some hardware components such as the Raspberry Pi,
+mini USB microphone, and a mini speaker. A case was built to house all these
+components to improve the overall appearance of the Speech Buddy. The case was
+laser cut using a black acrylic plastic. An acrylic plastic was used as the
+material for the case because of its cost and weight being low. The casing
+provides the necessary openings for the mini speaker and microphone, as well as
+the Ethernet port for computer connections. The layout of each side was done on
+a case making software online, [www.makercase.com](http://www.makercase.com).
+The software Coral Draw can also be used as well, we found that makercase.com
+was more helpful and easier to use from our perspective.
+
+### Android Application
+
+The Speech buddy project connections to an Android Application. The application
+displays information that the user adds to the DynamoDB database. The data on
+the Application is designed to display the data dynamical as the user inputs a
+new value. The application connects to the Amazon Web Service, DynamDB. Having
+the ability to read and change data on the external online database. The code or
+the android application for adding and deleting data is similar the python code
+versions done on the Alexa skill, expect done using the programming language
+Java. Creation of the Android Application is done in the Integrated Development
+(IDE), Android Studio.
 
 Build Instructions
 ==================

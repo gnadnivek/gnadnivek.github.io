@@ -312,7 +312,7 @@ Example](#database-alteration-via-user-case-examples)
 
 7.4.5 [Deleting](#deleting)
 
-7.4.6 [Error Checking](#error-dhecking)
+7.4.6 [Error Checking](#error-checking)
 
 7.4.7 [Project Case](#project-case)
 
@@ -709,7 +709,7 @@ hosting and an appropriate size and speed for Speech Buddy’s Requirements.
 Construction
 ============
 
-### construction Introduction
+### Construction Introduction
 
 When working on the speech Buddy project, we planned to incorporate an ability
 to create lists at the users’ request. This functionality in the voice interface

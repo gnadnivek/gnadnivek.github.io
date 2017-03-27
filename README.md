@@ -304,7 +304,7 @@ Example](#database-alteration-via-user-case-examples)
 
 ### 7.4 [Progress Reports](#progress-reports)
 
-7.4.1 [Status Report](#status-report-–-sent-by-sanjay-jerad-[02/14/2017])
+7.4.1 [Status Report](#status-report-sent-by-sanjay-jerad-[02/14/2017])
 
 7.4.2 [Integration Report](#integration-report)
 
@@ -728,7 +728,7 @@ voice service, allowing for easy integration of hardware and software.
 Progress Reports
 ================
 
-### Status Report – sent by Sanjay Jerad [02/14/2017]
+### Status Report - sent by Sanjay Jerad [02/14/2017]
 
 Development of Speech Buddy’s primary Amazon Voice Service Skill has begun; it
 is being coded in JavaScript as Amazon Voice Services has the most support for
@@ -759,7 +759,7 @@ progress forward from a slow start this semester. We intend to pick up the pace
 and have the primary skill, as well as some additional skills created and
 downloaded onto our Speech Buddy hardware for demonstration at the open house.
 
-### Integration Report – sent by William Anderson [03/07/2017]
+### Integration Report - sent by William Anderson [03/07/2017]
 
 Speech Buddy’s Integration achieved some significant milestones this past week.
 Kevin has created and deployed a Dynamo database, which we were able to develop
@@ -799,7 +799,7 @@ making our application compatible and switching some compile versions. Speech
 Buddy finally has connections on both sides, and we may now focus strictly on
 creating the necessary skills. Good progress was made this week.
 
-### Troubleshoot Report – sent by Kevin Dang [03/21/2017]
+### Troubleshoot Report - sent by Kevin Dang [03/21/2017]
 
 The integration of the Speech Buddy hardware and software has progressed
 smoothly the past few weeks, with some hindrances. Kevin has continued working

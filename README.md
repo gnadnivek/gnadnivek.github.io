@@ -302,13 +302,13 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.3 [DynamoDB Database](#dynamoDB-database)
 
-7.4 [Progress Reports](#progress-reports)
+### 7.4 [Progress Reports](#progress-reports)
 
 7.4.1 [Status Report](#status-report)
 
-7.4.1 [Integration Report](#integration-report)
+7.4.2 [Integration Report](#integration-report)
 
-7.4.1 [Troubleshoot Report](#troubleshoot-report)
+7.4.3 [Troubleshoot Report](#troubleshoot-report)
 
 ### 7.5 [Construction](#construction)
 

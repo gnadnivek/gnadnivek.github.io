@@ -302,50 +302,50 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.3 [DynamoDB Database](#dynamoDB-database)
 
-### 7.4 [Progress Reports](#progress-reports)
+### 7.4 [Construction](#construction)
 
-7.4.1 [Status Report](#status-report---sent-by-sanjay-jerad-02142017)
+7.4.1 [Construction Introduction](#construction-introduction)
 
-7.4.2 [Integration
+7.4.3 [Alexa Skill](#alexa-skill)
+
+7.4.2 [Creating The Database](#creating-the-database)
+
+7.4.4 [Adding](#adding)
+
+7.4.5 [Deleting](#deleting)
+
+7.4.6 [Error Checking](#error-checking)
+
+7.4.7 [Project Case](#project-case)
+
+7.4.8 [Android Application](#android-application)
+
+### 7.5 [Build Instructions](#build-instructions)
+
+7.5.1 [Build Introduction](#build-introduction)
+
+7.5.2 [Build Time](#build-time)
+
+7.5.3 [Mechanical Assembly](#mechanical-assembly)
+
+7.5.4 [Software Setup](#software-setup)
+
+7.5.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+
+7.5.6 [Database Setup](#database-setup)
+
+7.5.7 [Power Up and Testing](#power-up-and-testing)
+
+7.5.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+
+### 7.6 [Progress Reports](#progress-reports)
+
+7.6.1 [Status Report](#status-report---sent-by-sanjay-jerad-02142017)
+
+7.6.2 [Integration
 Report](#integration-report---sent-by-william-anderson-03072017)
 
-7.4.3 [Troubleshoot Report](#troubleshoot-report---sent-by-kevin-dang-03212017)
-
-### 7.5 [Construction](#construction)
-
-7.5.1 [Construction Introduction](#construction-introduction)
-
-7.5.3 [Alexa Skill](#alexa-skill)
-
-7.5.2 [Creating The Database](#creating-the-database)
-
-7.5.4 [Adding](#adding)
-
-7.5.5 [Deleting](#deleting)
-
-7.5.6 [Error Checking](#error-checking)
-
-7.5.7 [Project Case](#project-case)
-
-7.5.8 [Android Application](#android-application)
-
-### 7.6 [Build Instructions](#build-instructions)
-
-7.6.1 [Build Introduction](#build-introduction)
-
-7.6.2 [Build Time](#build-time)
-
-7.6.3 [Mechanical Assembly](#mechanical-assembly)
-
-7.6.4 [Software Setup](#software-setup)
-
-7.6.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
-
-7.6.6 [Database Setup](#database-setup)
-
-7.6.7 [Power Up and Testing](#power-up-and-testing)
-
-7.6.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+7.6.3 [Troubleshoot Report](#troubleshoot-report---sent-by-kevin-dang-03212017)
 
 ### 8. [Conclusion](#conclusion)
 
@@ -726,117 +726,6 @@ manipulation. Service is free only if data being written to it is not over a
 certain capacity ans size. Belongs to the same service and company as the Alexa
 voice service, allowing for easy integration of hardware and software.
 
-Progress Reports
-================
-
-Status Report - sent by Sanjay Jerad [02/14/2017]
--------------------------------------------------
-
-Development of Speech Buddy’s primary Amazon Voice Service Skill has begun; it
-is being coded in JavaScript as Amazon Voice Services has the most support for
-this language. The skill will be the final connection between the Speech Buddy
-Hardware and the Speech Buddy mobile application, allowing the data shared
-between the two to be shared synchronously. For testing purposes, simple
-pre-made skills such as a basic color skill are being deployed to the Speech
-Buddy hardware to ensure integration capabilities of our hardware.
-
-Speech Buddy has also had a new case designed for the hardware. The previous
-case model had joints and edges that were too thin by human error and could not
-support the cases structure. The case has been redesigned to be stronger, as
-well as have the size of the microphone hole adjusted to the most recent
-microphone we have been using. The new box is intended to be printed February
-14th.
-
-Budget wise, Speech Buddy has gone under no significant changes. The cost of the
-box could be assumed to be approx.  \$7.50 – \$10.00, as it consumes
-approximately ¼ - 1/3 of a sheet of acrylic.
-
-In relation to our project plan, we are technically caught up, but development
-of Speech Buddy itself has slowed prior to this and must be made up for within
-the coming weeks to ensure the schedule can be maintained with the assumption of
-unexpected software and hardware obstacles.
-
-No major obstacles were encountered this week, and Speech Buddy has made some
-progress forward from a slow start this semester. We intend to pick up the pace
-and have the primary skill, as well as some additional skills created and
-downloaded onto our Speech Buddy hardware for demonstration at the open house.
-
-Integration Report - sent by William Anderson [03/07/2017]
-----------------------------------------------------------
-
-Speech Buddy’s Integration achieved some significant milestones this past week.
-Kevin has created and deployed a Dynamo database, which we were able to develop
-a skill for in Python and finally successfully connect to. We are able to add,
-delete and manage items within our database via voice now.
-
-The Android application has had the Amazon Web Services SDK Installed by William
-and can successfully connect to the database as well, and now forms a complete
-integration with the Speech Buddy hardware, accessing the same data.
-
-Sanjay created a common Amazon Developer and AWS Services account for all of us
-to be able to develop collaboratively and host the final database and skills
-services.
-
-The next step is creating the appropriate skills to use Speech Buddy’s
-integration. The majority of the work now will be mostly programming Python
-skills to modify the database based on voice according to certain keywords; the
-connection is done, but usability must be instantiated.
-
- 
-
-Some Additional Notes:
-
-The case for Speech Buddy has been printed and is now assembled.
-
-Budget wise, Speech Buddy has gone under no significant changes; If the Dynamo
-database exceeds certain usage, we will begin being charged a few dollars a
-month, however this is an unlikely scenario.
-
-In relation to our project plan, we are on track, and will continue to implement
-usability of our AWS skill and enhance them to take advantage of our
-integration.
-
-There were some minor android obstacles encountered this week, primarily in
-relation to compatible android versions and the AWS SDK. These were overcome by
-making our application compatible and switching some compile versions. Speech
-Buddy finally has connections on both sides, and we may now focus strictly on
-creating the necessary skills. Good progress was made this week.
-
-Troubleshoot Report - sent by Kevin Dang [03/21/2017]
------------------------------------------------------
-
-The integration of the Speech Buddy hardware and software has progressed
-smoothly the past few weeks, with some hindrances. Kevin has continued working
-on the python code for the Alexa Skill along with the database. Problems appear
-with adding specific items to the database, up until a few weeks ago we have
-been hard coding values in to add data. Kevin has solved this problem by making
-the Alexa Skill add values depending on what the user says.
-
-He created the second table in DynamoDB to hold the Items of a specific List,
-and is able to add items. Problems arise around adding items for a list into the
-database, with needing to add items only after checking if a List exist to add
-to. Error checking is posing a problem and will be further looked into.
-
-William has continued working on the Application for the Speech Buddy, though
-the Integrated Development Environment “Android Studio” is posing some obstacles
-in the form of a context location issue. This is a technical code issue, not a
-connection issue. A connection is being made but the application is unable to
-display the data thus far. William hopes to resolve this shortly.
-
-Sanjay has explored the relationship between external libraries and the Alexa
-Skill. If it is possible to use other resources outside of the AWS services in
-our Skill. He has run into problems of implementing external libraries into
-sample skills such as the Color sample, as of now it does not look like Alexa
-Skill allows for external resources.
-
-Regarding the budget of the project it has been updated with the price of
-building the case, with pricing of the acrylic used and time on the laser
-cutter. Other than that budget is the same.
-
-Everything is going well schedule wise, we will continue working on the Skill,
-adding more features to make it user friendly. Other than that we are moving on
-track with the project plan.
-
 Construction
 ============
 
@@ -874,13 +763,13 @@ the tutorial we went to our Amazon Developer account to add a skill, this
 required an intent schema and a sample utterances. These two requirements proved
 difficult, needing a complete code to work. For this we used a basic Lambda
 skill that the AWS lambda service provided on the website. Using that sample
-skill we were able to install skills onto the raspberry pi with Alexa.
+skill we were able to install skills onto the Raspberry Pi with Alexa.
 
 We started coding the skill using Python. Connection to the database proved
 simple with just 3 lines of code, and adding permissions. Main goal was
-developing code for adding and deleting data in the Dynamo database. Adding and
-deleting codes were done in methods, so they can be easily utilized anywhere in
-the code
+developing code for adding and deleting data in the DynamoDB database. Adding
+and deleting codes were done in methods, so they can be easily utilized anywhere
+in the code
 
 ### Creating the Database
 
@@ -1221,6 +1110,155 @@ and filled in the required fields that are needed for the intents and the
 utterances; these can be found on [Sanjays GitHub
 page](https://github.com/Sanjay4966/Sanjay4966.github.io), the PDF are
 developer-amazon-com and developer-amazon-web.
+
+\pagebreak
+
+Progress Reports
+================
+
+Status Report - sent by Sanjay Jerad [02/14/2017]
+-------------------------------------------------
+
+Dear Kristian Medri,
+
+ 
+
+Development of Speech Buddy’s primary Amazon Voice Service Skill has begun; it
+is being coded in JavaScript as Amazon Voice Services has the most support for
+this language. The skill will be the final connection between the Speech Buddy
+Hardware and the Speech Buddy mobile application, allowing the data shared
+between the two to be shared synchronously. For testing purposes, simple
+pre-made skills such as a basic color skill are being deployed to the Speech
+Buddy hardware to ensure integration capabilities of our hardware.
+
+Speech Buddy has also had a new case designed for the hardware. The previous
+case model had joints and edges that were too thin by human error and could not
+support the cases structure. The case has been redesigned to be stronger, as
+well as have the size of the microphone hole adjusted to the most recent
+microphone we have been using. The new box is intended to be printed February
+14th.
+
+Budget wise, Speech Buddy has gone under no significant changes. The cost of the
+box could be assumed to be approx.  \$7.50 – \$10.00, as it consumes
+approximately ¼ - 1/3 of a sheet of acrylic.
+
+In relation to our project plan, we are technically caught up, but development
+of Speech Buddy itself has slowed prior to this and must be made up for within
+the coming weeks to ensure the schedule can be maintained with the assumption of
+unexpected software and hardware obstacles.
+
+No major obstacles were encountered this week, and Speech Buddy has made some
+progress forward from a slow start this semester. We intend to pick up the pace
+and have the primary skill, as well as some additional skills created and
+downloaded onto our Speech Buddy hardware for demonstration at the open house.
+
+ 
+
+Sincerely,
+
+ 
+
+Sanjay Jerad
+
+Integration Report - sent by William Anderson [03/07/2017]
+----------------------------------------------------------
+
+Dear Kristian Medri,
+
+ 
+
+Speech Buddy’s Integration achieved some significant milestones this past week.
+Kevin has created and deployed a Dynamo database, which we were able to develop
+a skill for in Python and finally successfully connect to. We are able to add,
+delete and manage items within our database via voice now.
+
+The Android application has had the Amazon Web Services SDK Installed by William
+and can successfully connect to the database as well, and now forms a complete
+integration with the Speech Buddy hardware, accessing the same data.
+
+Sanjay created a common Amazon Developer and AWS Services account for all of us
+to be able to develop collaboratively and host the final database and skills
+services.
+
+The next step is creating the appropriate skills to use Speech Buddy’s
+integration. The majority of the work now will be mostly programming Python
+skills to modify the database based on voice according to certain keywords; the
+connection is done, but usability must be instantiated.
+
+ 
+
+Some Additional Notes:
+
+The case for Speech Buddy has been printed and is now assembled.
+
+Budget wise, Speech Buddy has gone under no significant changes; If the Dynamo
+database exceeds certain usage, we will begin being charged a few dollars a
+month, however this is an unlikely scenario.
+
+In relation to our project plan, we are on track, and will continue to implement
+usability of our AWS skill and enhance them to take advantage of our
+integration.
+
+There were some minor android obstacles encountered this week, primarily in
+relation to compatible android versions and the AWS SDK. These were overcome by
+making our application compatible and switching some compile versions. Speech
+Buddy finally has connections on both sides, and we may now focus strictly on
+creating the necessary skills. Good progress was made this week.
+
+ 
+
+Sincerely,
+
+ 
+
+William Anderson
+
+Troubleshoot Report - sent by Kevin Dang [03/21/2017]
+-----------------------------------------------------
+
+Dear Kristian Medri,
+
+ 
+
+The integration of the Speech Buddy hardware and software has progressed
+smoothly the past few weeks, with some hindrances. Kevin has continued working
+on the python code for the Alexa Skill along with the database. Problems appear
+with adding specific items to the database, up until a few weeks ago we have
+been hard coding values in to add data. Kevin has solved this problem by making
+the Alexa Skill add values depending on what the user says.
+
+He created the second table in DynamoDB to hold the Items of a specific List,
+and is able to add items. Problems arise around adding items for a list into the
+database, with needing to add items only after checking if a List exist to add
+to. Error checking is posing a problem and will be further looked into.
+
+William has continued working on the Application for the Speech Buddy, though
+the Integrated Development Environment “Android Studio” is posing some obstacles
+in the form of a context location issue. This is a technical code issue, not a
+connection issue. A connection is being made but the application is unable to
+display the data thus far. William hopes to resolve this shortly.
+
+Sanjay has explored the relationship between external libraries and the Alexa
+Skill. If it is possible to use other resources outside of the AWS services in
+our Skill. He has run into problems of implementing external libraries into
+sample skills such as the Color sample, as of now it does not look like Alexa
+Skill allows for external resources.
+
+Regarding the budget of the project it has been updated with the price of
+building the case, with pricing of the acrylic used and time on the laser
+cutter. Other than that budget is the same.
+
+Everything is going well schedule wise, we will continue working on the Skill,
+adding more features to make it user friendly. Other than that we are moving on
+track with the project plan.
+
+ 
+
+Sincerely,
+
+ 
+
+Kevin Dang
 
 \pagebreak
 

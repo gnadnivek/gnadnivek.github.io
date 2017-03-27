@@ -300,45 +300,57 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.2 [Firebase Hosting](#firebase-database)
 
-### 7.4 [Construction](#construction)
+7.3.3 [DynamoDB Database](#dynamoDB-database)
 
-7.4.1 [Construction Introduction](#construction-introduction)
+7.4 [Progress Reports](#progress-reports)
 
-7.4.2 [Creating The Database](#creating-the-database)
+7.4.1 [Status Report](#status-report)
 
-7.4.3 [Alexa Skill](#alexa-skill)
+7.4.1 [Integration Report](#integration-report)
 
-7.4.4 [Adding](#adding)
+7.4.1 [Troubleshoot Report](#troubleshoot-report)
 
-7.4.5 [Deleting](#deleting)
+### 7.5 [Construction](#construction)
 
-7.4.6 [Error Checking](#error-checking)
+7.5.1 [Construction Introduction](#construction-introduction)
 
-7.4.7 [Project Case](#project-case)
+7.5.2 [Creating The Database](#creating-the-database)
 
-7.4.8 [Android Application](#android-application)
+7.5.3 [Alexa Skill](#alexa-skill)
 
-### 7.5 [Build Instructions](#build-instructions)
+7.5.4 [Adding](#adding)
 
-7.5.1 [Build Introduction](#build-introduction)
+7.5.5 [Deleting](#deleting)
 
-7.5.2 [Build Time](#build-time)
+7.5.6 [Error Checking](#error-checking)
 
-7.5.3 [Mechanical Assembly](#mechanical-assembly)
+7.5.7 [Project Case](#project-case)
 
-7.5.4 [Software Setup](#software-setup)
+7.5.8 [Android Application](#android-application)
 
-7.5.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+### 7.6 [Build Instructions](#build-instructions)
 
-7.5.6 [Database Setup](#database-setup)
+7.6.1 [Build Introduction](#build-introduction)
 
-7.5.7 [Power Up and Testing](#power-up-and-testing)
+7.6.2 [Build Time](#build-time)
 
-7.5.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+7.6.3 [Mechanical Assembly](#mechanical-assembly)
+
+7.6.4 [Software Setup](#software-setup)
+
+7.6.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+
+7.6.6 [Database Setup](#database-setup)
+
+7.6.7 [Power Up and Testing](#power-up-and-testing)
+
+7.6.8 [Colour Tutorial Setup](#colour-tutorial-setup)
 
 ### 8. [Conclusion](#conclusion)
 
-### 9. [References](#references)
+### 9. [Recommendations](#recommendations)
+
+### 10. [References](#references)
 
 \pagebreak
 
@@ -375,7 +387,7 @@ Technical Problem
 
 The problem solved by this project is that it helps users take simple notes,
 such as a grocery list or small reminders for when you don’t have a pen and
-paper available. This project will help solved problems where people forget an
+paper available. This project will help solve problems where people forget an
 important detail or appointment, by storing what the user says into a readable
 text format.
 
@@ -706,6 +718,121 @@ The Speech Buddy Hardware and application will be utilizing Firebase databases
 for data storage. The service offers free (to a certain amount of traffic) data
 hosting and an appropriate size and speed for Speech Buddy’s Requirements.
 
+### DynamoDB Database
+
+an Amazon Web Service that allows for the create of tables for data storage, and
+manipulation. Service is free only if data being written to it is not over a
+certain capacity ans size. Belongs to the same service and company as the Alexa
+voice service, allowing for easy integration of hardware and software.
+
+Progress Reports
+================
+
+### Status Report – sent by Sanjay Jerad [02/14/2017]
+
+Development of Speech Buddy’s primary Amazon Voice Service Skill has begun; it
+is being coded in JavaScript as Amazon Voice Services has the most support for
+this language. The skill will be the final connection between the Speech Buddy
+Hardware and the Speech Buddy mobile application, allowing the data shared
+between the two to be shared synchronously. For testing purposes, simple
+pre-made skills such as a basic color skill are being deployed to the Speech
+Buddy hardware to ensure integration capabilities of our hardware.
+
+Speech Buddy has also had a new case designed for the hardware. The previous
+case model had joints and edges that were too thin by human error and could not
+support the cases structure. The case has been redesigned to be stronger, as
+well as have the size of the microphone hole adjusted to the most recent
+microphone we have been using. The new box is intended to be printed February
+14th.
+
+Budget wise, Speech Buddy has gone under no significant changes. The cost of the
+box could be assumed to be approx.  \$7.50 – \$10.00, as it consumes
+approximately ¼ - 1/3 of a sheet of acrylic.
+
+In relation to our project plan, we are technically caught up, but development
+of Speech Buddy itself has slowed prior to this and must be made up for within
+the coming weeks to ensure the schedule can be maintained with the assumption of
+unexpected software and hardware obstacles.
+
+No major obstacles were encountered this week, and Speech Buddy has made some
+progress forward from a slow start this semester. We intend to pick up the pace
+and have the primary skill, as well as some additional skills created and
+downloaded onto our Speech Buddy hardware for demonstration at the open house.
+
+### Integration Report – sent by William Anderson [03/07/2017]
+
+Speech Buddy’s Integration achieved some significant milestones this past week.
+Kevin has created and deployed a Dynamo database, which we were able to develop
+a skill for in Python and finally successfully connect to. We are able to add,
+delete and manage items within our database via voice now.
+
+The Android application has had the Amazon Web Services SDK Installed by William
+and can successfully connect to the database as well, and now forms a complete
+integration with the Speech Buddy hardware, accessing the same data.
+
+Sanjay created a common Amazon Developer and AWS Services account for all of us
+to be able to develop collaboratively and host the final database and skills
+services.
+
+The next step is creating the appropriate skills to use Speech Buddy’s
+integration. The majority of the work now will be mostly programming Python
+skills to modify the database based on voice according to certain keywords; the
+connection is done, but usability must be instantiated.
+
+ 
+
+Some Additional Notes:
+
+The case for Speech Buddy has been printed and is now assembled.
+
+Budget wise, Speech Buddy has gone under no significant changes; If the Dynamo
+database exceeds certain usage, we will begin being charged a few dollars a
+month, however this is an unlikely scenario.
+
+In relation to our project plan, we are on track, and will continue to implement
+usability of our AWS skill and enhance them to take advantage of our
+integration.
+
+There were some minor android obstacles encountered this week, primarily in
+relation to compatible android versions and the AWS SDK. These were overcome by
+making our application compatible and switching some compile versions. Speech
+Buddy finally has connections on both sides, and we may now focus strictly on
+creating the necessary skills. Good progress was made this week.
+
+### Troubleshoot Report – sent by Kevin Dang [03/21/2017]
+
+The integration of the Speech Buddy hardware and software has progressed
+smoothly the past few weeks, with some hindrances. Kevin has continued working
+on the python code for the Alexa Skill along with the database. Problems appear
+with adding specific items to the database, up until a few weeks ago we have
+been hard coding values in to add data. Kevin has solved this problem by making
+the Alexa Skill add values depending on what the user says.
+
+He created the second table in DynamoDB to hold the Items of a specific List,
+and is able to add items. Problems arise around adding items for a list into the
+database, with needing to add items only after checking if a List exist to add
+to. Error checking is posing a problem and will be further looked into.
+
+William has continued working on the Application for the Speech Buddy, though
+the Integrated Development Environment “Android Studio” is posing some obstacles
+in the form of a context location issue. This is a technical code issue, not a
+connection issue. A connection is being made but the application is unable to
+display the data thus far. William hopes to resolve this shortly.
+
+Sanjay has explored the relationship between external libraries and the Alexa
+Skill. If it is possible to use other resources outside of the AWS services in
+our Skill. He has run into problems of implementing external libraries into
+sample skills such as the Color sample, as of now it does not look like Alexa
+Skill allows for external resources.
+
+Regarding the budget of the project it has been updated with the price of
+building the case, with pricing of the acrylic used and time on the laser
+cutter. Other than that budget is the same.
+
+Everything is going well schedule wise, we will continue working on the Skill,
+adding more features to make it user friendly. Other than that we are moving on
+track with the project plan.
+
 Construction
 ============
 
@@ -730,7 +857,7 @@ online.
 
 ### Creating the Database
 
-Creating the database was simple on the AWS website, navigating the DynamoDB
+Creation of the database was simple on the AWS website, navigating the DynamoDB
 page to create two separate tables. A table called, ListNames with a column for
 the Name. A table called, ItemNames with the columns for, Item name and list
 name. Using a second table with two columns including item name and list name,
@@ -884,7 +1011,7 @@ The Speech buddy project connections to an Android Application. The application
 displays information that the user adds to the DynamoDB database. The data on
 the Application is designed to display the data dynamical as the user inputs a
 new value. The application connects to the Amazon Web Service, DynamDB. Having
-the ability to read and change data on the external online database. The code or
+the ability to read and write data to the external online database. The code or
 the android application for adding and deleting data is similar the python code
 versions done on the Alexa skill, expect done using the programming language
 Java. Creation of the Android Application is done in the Integrated Development
@@ -933,7 +1060,7 @@ guide provided here:
 
 [Amazon Voice Setup
 (](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
-Not install the wake word activation). why?
+Not install the wake word activation).
 
 Base on the AVS link provided, the setup is as follows:
 
@@ -1081,6 +1208,35 @@ developer-amazon-com and developer-amazon-web.
 
 Conclusion
 ==========
+
+The Speech Buddy project is a voice interface allowing users to control and
+manipulate data easily. This project hopes to improve the planning and
+scheduling abilities of users, in a unique and effective manner. The Speech
+Buddy project consists of a Raspberry Pi with a microphone and speaker, for
+input and output. Data is inputted by the user in the form of voice input, which
+is stored on an external online database. Data can be read on our Android
+Application, displaying information located on the database in a user-friendly
+interface. The Android Application also includes the functionality for manual
+input using the keyboard on smartphones, rather than through the microphone.
+
+Recommendations
+===============
+
+The Speech Buddy project is able is work correctly and incorporates the main
+functionalities we desired. Following the Build instructions mentioned on the
+Technical Report, if the user would like to construct this project, there are
+some recommendations we would like to include. The idea of portable is
+important, by using a small power supply to generated enough Voltage and
+Current, the Speech Buddy can be transported along with user. A smaller case can
+be created when looking at the hardware components, if a smaller speaker is
+available. The Project utilizes Amazon Alexa’s voice Service, a platform that
+allows develops to create different Skills. The Speech Buddy incorporates a
+skill that allows users to add and delete from a database. Adding additional
+skills to the project is possible to improve Speech Buddy’s overall abilities.
+Examples such as, ability to calculate temperature, do basic mathematical
+problems. The Speech Buddy can be tailored to the user, evolving to meet your
+requirements and standard as an engineer, developer or a regular everyday
+person.   
 
 \pagebreak
 

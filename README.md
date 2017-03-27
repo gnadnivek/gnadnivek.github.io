@@ -315,9 +315,9 @@ Report](#integration-report---sent-by-william-anderson-03072017)
 
 7.5.1 [Construction Introduction](#construction-introduction)
 
-7.5.2 [Creating The Database](#creating-the-database)
-
 7.5.3 [Alexa Skill](#alexa-skill)
+
+7.5.2 [Creating The Database](#creating-the-database)
 
 7.5.4 [Adding](#adding)
 
@@ -729,7 +729,8 @@ voice service, allowing for easy integration of hardware and software.
 Progress Reports
 ================
 
-### Status Report - sent by Sanjay Jerad [02/14/2017]
+Status Report - sent by Sanjay Jerad [02/14/2017]
+-------------------------------------------------
 
 Development of Speech Buddy’s primary Amazon Voice Service Skill has begun; it
 is being coded in JavaScript as Amazon Voice Services has the most support for
@@ -760,7 +761,8 @@ progress forward from a slow start this semester. We intend to pick up the pace
 and have the primary skill, as well as some additional skills created and
 downloaded onto our Speech Buddy hardware for demonstration at the open house.
 
-### Integration Report - sent by William Anderson [03/07/2017]
+Integration Report - sent by William Anderson [03/07/2017]
+----------------------------------------------------------
 
 Speech Buddy’s Integration achieved some significant milestones this past week.
 Kevin has created and deployed a Dynamo database, which we were able to develop
@@ -800,7 +802,8 @@ making our application compatible and switching some compile versions. Speech
 Buddy finally has connections on both sides, and we may now focus strictly on
 creating the necessary skills. Good progress was made this week.
 
-### Troubleshoot Report - sent by Kevin Dang [03/21/2017]
+Troubleshoot Report - sent by Kevin Dang [03/21/2017]
+-----------------------------------------------------
 
 The integration of the Speech Buddy hardware and software has progressed
 smoothly the past few weeks, with some hindrances. Kevin has continued working
@@ -856,16 +859,6 @@ incorporated the Amazon Web Service (AWS), DynamoDB. Using this service with the
 Alexa skill we were creating allowed us to take user voice input, and store
 online.
 
-### Creating the Database
-
-Creation of the database was simple on the AWS website, navigating the DynamoDB
-page to create two separate tables. A table called, ListNames with a column for
-the Name. A table called, ItemNames with the columns for, Item name and list
-name. Using a second table with two columns including item name and list name,
-allowed for the minimization of tables we needed. This also allowed us to
-reference different items depending on the list the user placed it in. With this
-we created an external database to house the data users inputted.
-
 ### Alexa Skill
 
 On the Amazon Web Services (AWS) we used a service known as, Lambda. This
@@ -888,6 +881,28 @@ simple with just 3 lines of code, and adding permissions. Main goal was
 developing code for adding and deleting data in the Dynamo database. Adding and
 deleting codes were done in methods, so they can be easily utilized anywhere in
 the code
+
+### Creating the Database
+
+Creation of the database was simple on the AWS website, navigating the DynamoDB
+page to create two separate tables. A table called, ListNames with a column for
+the Name. A table called, ItemNames with the columns for, Item name and list
+name. Using a second table with two columns including item name and list name,
+allowed for the minimization of tables we needed. This also allowed us to
+reference different items depending on the list the user placed it in. With this
+we created an external database to house the data users inputted.
+
+Connection to the database was required for us to manipulate the values users
+inputted. Both the hardware and software portions of the Speech Buddy project
+was to be connect to the same external database, DynamoDB. The Alexa Skill we
+were implementing requires the use of the Lambda web Service. This web service
+utilized a policy will every skill created. The policy allows for other web
+services, such as DynamoDB to access the skill and also grant permissions to the
+person using the Alexa skill. To connect to skill to the online database, we
+included the DynamoDB permissions to the policy. To fully utilize the ability of
+the DynamoDB database we imported the “boto3” library in the Alexa skill python
+code. This library and class allowed us to use built-in functions to access and
+manipulate the tables located in the database.  
 
 ### Adding
 
@@ -973,9 +988,10 @@ def check_ListName(listName):
 Item Error Check:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def check_ItemName(itemName):
+def check_ItemName(itemName, listName):
     
-    checkName = ""
+    checkItem = ""
+    checkList = ""
     nameCount = 0
     isThere = "false"
     
@@ -986,8 +1002,9 @@ def check_ItemName(itemName):
     
     nameCount == len(response['Items'])
     for index, item in enumerate(response['Items']):
-        checkName = item['ItemId']
-        if checkName == itemName :
+        checkItem = item['ItemId']
+        checkList = item['ListName']
+        if (checkItem == itemName) and (checkList == listName):
             isThere = "true"
     
     return isThere

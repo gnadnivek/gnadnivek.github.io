@@ -1433,9 +1433,14 @@ account, select the Lambda program, and search for “color”. A color skill ki
 should appear. After selecting the skill, follow the steps that were provided to
 make the skill as the previous skill, “IAM”. Once you have completed the steps
 and filled in the required fields that are needed for the intents and the
-utterances; these can be found on [Sanjays GitHub
-page](https://github.com/Sanjay4966/Sanjay4966.github.io), the PDF are
-developer-amazon-com and developer-amazon-web.
+utterances; these can be found on Sanjays GitHub page
+<https://github.com/Sanjay4966/Sanjay4966.github.io>, the PDF are
+developer-amazon-com and developer-amazon-web. For better customization, you can
+add more color schemes by adding them into the Intent line so, that all the
+colors that are set will be able to be picked buy the user and the program will
+accept the valid inputs. You can also add more utterances that a user can say to
+speech buddy, that will allow it reply as long as that utterance the user says
+is in the list of phrases that it is allowed to hear.
 
 \pagebreak
 

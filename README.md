@@ -334,9 +334,23 @@ Example](#database-alteration-via-user-case-examples)
 
 7.5.6 [Database Setup](#database-setup)
 
-7.5.7 [Power Up and Testing](#power-up-and-testing)
+### 7.5.7 SpeechBuddy Android Application Setup Instructions
 
-7.5.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+7.5.7.1 Customizable/Local Installation
+
+7.5.7.2 Play Store Installation
+
+7.5.7.3 The Speech Buddy Application
+
+7.5.8 [Power Up and Testing](#power-up-and-testing)
+
+7.5.8.1 Speech Buddy Application Directions and Controls
+
+7.5.8.2 The Toolbar
+
+7.5.8.2 List Screen
+
+7.5.9 [Colour Tutorial Setup](#colour-tutorial-setup)
 
 ### 7.6 [Progress Reports](#progress-reports)
 
@@ -379,11 +393,11 @@ Objective
 The objective of this project is to create a usable voice interface that will
 help people with organization and planning. Having the ability to help manage
 tasks and improve the users planning and scheduling efficiently. Similar to
-Apple’s Siri and Microsoft's Cortana.  In this current age of time a mobile
-phone is carried everywhere and used 24/7. We want to utilize this aspect to
-create a unique interface with a virtual voice to improve the users planning
-skills. If a piece of technology is constantly with people the majority of the
-time, why not use that technology in an effort to help them.
+Apple’s Siri and Microsoft's Cortana. In this current age of time a mobile phone
+is carried everywhere and used 24/7. We want to utilize this aspect to create a
+unique interface with a virtual voice to improve the users planning skills. If a
+piece of technology is constantly with people the majority of the time, why not
+use that technology in an effort to help them.
 
 Technical Problem
 -----------------
@@ -1088,7 +1102,106 @@ dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('table_name_here')
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Power Up and Testing
+SpeechBuddy Android Application Setup Instructions
+--------------------------------------------------
+
+### Customizable/Local Installation
+
+In order to use the Speech Buddy application, you must have Android Studio
+installed on your machine, which can be found at
+<https://developer.android.com/studio/index.html>. During Installation Select
+all default settings and ensure Google Play Services for SDK 23+ are installed.
+(This can be done during Installation, where the installer provides and initial
+list of optional plug-ins to install).
+
+ 
+
+Make sure once Android Studio is installed that is updated to the most recent
+version. This can be done by accepting the prompts upon start up or following
+the instructions found at
+<https://developer.android.com/studio/intro/update.html>
+
+ 
+
+Android Studio Requires the Java Development Kit to function. This can be
+installed from
+<http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html/>.Follow
+All default paths and installation instructions.
+
+Once the JDK and Android Studio are Installed and up to date, Create a new
+Project In Android Studio By Going to File \> New Project. Set the Minimum SDK
+version to 17 (KitKat). Choose any project name and specify the package name as
+“william.anderson”. Do not create any default activities.
+
+After the Project has been made, go to
+[www.github.com/willcodyanderson/SpeechBuddyProject](www.github.com/willcodyanderson/SpeechBuddyProject)
+and download the repository. Unzip the repository in your downloads folder. 
+Now, in Android Studio, In your newly create project, go to File\> Add Module \>
+Browse, and select the extracted directory downloaded from github.
+
+After the module has been added to your project, go to the project level
+build.gradle that will be found under the first expansion of the project
+directory. Add the following line of code:  classpath
+'com.google.gms:google-services:3.0.0'. Save the File.
+
+ 
+
+If you have knowledge of any Android Programming, you may now modify and adjust
+the application in your virtual environment as you wish. If not, continue to the
+next instruction.
+
+ 
+
+Enable Developer Options on the intended Android Device. This is typically done
+by going to Settings and repetitively tapping the “Build Number” Option several
+times. For further details, see
+[www.androidcentral.com/how-enable-developer-settings-android-42](http://www.androidcentral.com/how-enable-developer-settings-android-42).
+
+Once developer settings are enabled on your device, the developer options tab
+will be displayed under your settings tab. Enter it and select “Enable USB
+Debugging”. This allows APK’s to be downloaded onto your device from Android
+Studio.
+
+ 
+
+Connect your device to your computer that is running Android Studio. In Android 
+Studio, within the Speech Buddy Project, select Run \> YourDeviceName.  This
+will install the application locally to your device. You may now disconnect the
+device from your computer and use the application freely as you choose. Keep in
+mind the Speech Buddy Application requires online access to function.
+
+### Play Store Installation
+
+If you have no wish to modify the Speech Buddy Application or adjust internal
+setting, you may use the basic Speech Buddy App provided in the Google Play
+Store.  Search For “Speech Buddy” within the Play Store and select and install
+the result that lists “William Anderson” as its developer.
+
+You must have SDK 17+ (KitKat) to install the Speech Buddy Application and meet
+all hardware requirements. If you do not meet these requirements, the
+application will not be displayed as an option within the Google Play Store. If
+this is the case, please follow the Customizable Instructions above and modify
+the programs minimum API to the appropriate level for you device. This also
+involves some changes that need to be made to the manifest.xml file. Adjusting
+this level may cause significant changes within the applications supported
+features, and will require some programming experience.
+
+### The Speech Buddy Application
+
+Now that you have the Speech Buddy Application installed, you can launch it on
+your device.
+
+The Speech Buddy Application dynamically keeps track of voice entry’s and
+modifications you have made to your selected data, and is best used in
+conjunction with you Speech Buddy Hardware. The application also has the options
+to manipulate and modify data from within your Android device. Any changes made
+to your data on the application will be represented in the data retrieved by
+your hardware. For example, If I deleted “grapes” from “groceries” on my Speech
+Buddy Application, And then verbally ask the Speech Buddy hardware for my
+grocery list, “grapes” will no longer be listed.
+
+Power Up and Testing
+--------------------
 
 To Run AVS open two terminals on the Raspberry Pi:
 
@@ -1114,6 +1227,89 @@ will output a basic tone if it is working. It currently has basic capabilities
 such as simple mathematics, google queries, and time and weather updates. Speech
 Buddy's location may be incorrect. Test this by asking the current time or
 weather, and change your location in your amazon profile accordingly.
+
+ 
+
+Test the Alexa Skill by adding a list to the database, ask the Speech Buddy:
+
+**“Speech Buddy add grocery list”**
+
+An entire in the database can be seen on the Android Application, displaying a
+“grocery” value in List. Testing of the Android Application is discussed below.
+
+Try adding an item to the recently created list, “grocery”, ask the Speech
+Buddy:
+
+**“Speech Buddy add potatoes to grocery”**
+
+The newly added item can be seen on the Android Application by clicking the text
+“grocery”. this will take you to a new display show the items in the “grocery”
+list.
+
+Testing of the Deleting functionality can be test the same way by replacing the
+word “add” with “remove” or “delete”.
+
+### Speech Buddy Application Directions and Controls
+
+Upon launching the application, a login screen will be provided. If you have an
+existing login, enter your credentials and select the “Login” button. If this is
+your first time using the Speech Buddy Application, select “Sign Up”, enter an
+email for your username and a password (password must be at least 6 characters
+in length) and select the signup button. You may now login using these
+credentials.
+
+After the initial login, Speech Buddy will bring you to the core of the
+application. This is where all lists and their corresponding sub-items are kept,
+and all data you have created and manipulated is shown.
+
+### The Toolbar
+
+On the toolbar there are several options, including:
+
+ 
+
+Add List/Item: This allows you to create a new data entry within the current
+directory. Selecting this will prompt a pop up box asking for the information of
+the new entry. This option may be identified by the + symbol on the button.
+
+ 
+
+Remove List/Item: This allows you to remove a data entry within the current
+directory. Selecting this will prompt a pop up box asking for the information of
+the entry to be removed. This option may be identified by the - symbol on the
+button. For ease of use, the user may also delete data by pressing and holding
+the chosen entry within the visual list. This will launch a prompt for data
+deletion.
+
+ 
+
+Drop Down Menu: This provides several options to the user from within the
+toolbar, including Clear All Data, which removes all lists and their children
+from your account for essentially a clean start. The About App Dropdown provides
+a description of the Speech Buddy App and hardware, as well as it’s authors.
+Finally, the Logout option will sign the current user out and bring them back to
+the login screen.
+
+ 
+
+Back: This option, a backwards arrow, will be provided on the toolbar when the
+user has navigated to a subdirectory. It may be used to navigate back to the
+parent directory.
+
+### List Screen
+
+The user may scroll up and down the data entries if lists or items within lists
+by swiping vertically in either direction. As mentioned prior, a user may delete
+a data entry by pressing and holding the desired element.
+
+ 
+
+If a data entry is a parent of other data entries (If a List has any Items
+stored within it),
+
+It may be tapped to display the lists children data entries. Upon entering a sub
+directory like this, a back arrow will be added to the toolbar, which can be
+used to navigate back to the parent directory.
 
 ### Colour Tutorial Setup
 

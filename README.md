@@ -334,21 +334,22 @@ Example](#database-alteration-via-user-case-examples)
 
 7.5.6 [Database Setup](#database-setup)
 
-### 7.5.7 SpeechBuddy Android Application Setup Instructions
+### 7.5.7 [SpeechBuddy Android Application Setup Instructions](#speechbuddy-android-application-setup-instructions)
 
-7.5.7.1 Customizable/Local Installation
+7.5.7.1 [Customizable/Local Installation](#customizablelocal-installation)
 
-7.5.7.2 Play Store Installation
+7.5.7.2 [Play Store Installation](#play-store-installation)
 
-7.5.7.3 The Speech Buddy Application
+7.5.7.3 [The Speech Buddy Application](#the-speech-buddy-application)
 
 7.5.8 [Power Up and Testing](#power-up-and-testing)
 
-7.5.8.1 Speech Buddy Application Directions and Controls
+7.5.8.1 [Speech Buddy Application Directions and
+Controls](#speech-buddy-application-directions-and-controls)
 
-7.5.8.2 The Toolbar
+7.5.8.2 [The Toolbar](#the-toolbar)
 
-7.5.8.2 List Screen
+7.5.8.2 [List Screen](#list-screen)
 
 7.5.9 [Colour Tutorial Setup](#colour-tutorial-setup)
 

@@ -18,8 +18,6 @@ Speech Buddy Project
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
 
-test[@1234]
-
 Declaration of Joint Authorship
 ===============================
 

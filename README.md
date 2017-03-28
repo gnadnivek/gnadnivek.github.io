@@ -338,11 +338,18 @@ Example](#database-alteration-via-user-case-examples)
 
 ### 7.5.7 [SpeechBuddy Android Application Setup Instructions](#speechbuddy-android-application-setup-instructions)
 
-7.5.7.1 [Customizable/Local Installation](#customizablelocal-installation)
+7.5.7.1 [Additional Amazon Account Configuration for Android
+Application](#additional-amazon-account-configuration-for-android-application)
 
-7.5.7.2 [Play Store Installation](#play-store-installation)
+7.5.7.2 [Cognito Identity](#cognito-identity)
 
-7.5.7.3 [The Speech Buddy Application](#the-speech-buddy-application)
+7.5.7.3 [IAM Roles](#iAM-roles)
+
+7.5.7.4 [Customizable/Local Installation](#customizablelocal-installation)
+
+7.5.7.5 [Play Store Installation](#play-store-installation)
+
+7.5.7.6 [The Speech Buddy Application](#the-speech-buddy-application)
 
 ### 7.5.8 [Power Up and Testing](#power-up-and-testing)
 
@@ -1117,6 +1124,101 @@ table = dynamodb.Table('table_name_here')
 
 SpeechBuddy Android Application Setup Instructions
 --------------------------------------------------
+
+### Additional Amazon Account Configuration for Android Application
+
+### Cognito Identity
+
+There are some additional setup instructions you must follow in the
+configuration of your Amazon Web Services Account.
+
+To use AWS services in your Speech Buddy Application, you must obtain AWS
+Credentials using Amazon Cognito Identity as your credential provider. Using a
+credentials provider allows you to access AWS services without having to embed
+your private credentials in your application. This also allows you to set
+permissions to control which AWS services your users have access to.
+
+The identities of your application's users are stored and managed by an identity
+pool, which is a store of user identity data specific to your account. Every
+identity pool has roles that specify which AWS resources your users can access.
+Typically, a developer will use one identity pool per application. For more
+information on identity pools, see the [Cognito Developer
+Guide](http://docs.aws.amazon.com/cognito/devguide/identity/identity-pools/).
+
+To create an identity pool for your application:
+
+1.  Log in to the [Cognito
+    Console](https://console.aws.amazon.com/cognito/home) and click Manage
+    Federated Identities, then Create new identity pool.
+
+2.  Enter a name for your Identity Pool and check the checkbox to enable access
+    to unauthenticated identities. Click Create Pool to create your identity
+    pool.
+
+3.  Click Allow to create the roles with access to your new identity pool.
+
+The next page displays code that creates a credentials provider so you can
+easily integrate Cognito Identity in your Android application.
+
+For more information about Amazon Cognito Identity, check out
+<http://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html>
+
+ 
+
+In Addition to this, you must create a policy within your AWS account that will
+allow the Speech Buddy Application to connect to the Dynamo Database securely.
+
+### IAM Roles
+
+To use DynamoDB within the Speech Buddy Application, you must set the correct
+permissions. The following IAM policy allows the user to perform the creation,
+deletion and modification of list/item resources identified
+by [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
+
+ 
+
+The policy you must policy you must create is:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:PutItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem",
+                "dynamodb:BatchWriteItem"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:us-east-1:940271869439:table/ListNames"
+            ]
+        }
+    ]
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Apply this policy to the unauthenticated role assigned to your Cognito identity
+pool, replacing the Resource values with the correct ARN for your DynamoDB
+table:
+
+1.  Log in to the [IAM Console](https://console.aws.amazon.com/iam/home).
+
+2.  Select Roles and select the "Unauth" role that Cognito created for you.
+
+3.  Click Attach Role Policy.
+
+4.  Select Custom Policy and click Select.
+
+5.  Copy the policy above into the policy editing box.
+
+6.  Click Apply Policy.
+
+For more information on IAM policies, check out
+<http://docs.aws.amazon.com/IAM/latest/UserGuide/access\_policies.html>
 
 ### Customizable/Local Installation
 

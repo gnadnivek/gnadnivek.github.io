@@ -1,6 +1,6 @@
 ---
-csl: apa.csl
 bibliography: RPiCitations.bib
+csl: apa.csl
 title: "Technical Report: Speech Buddy"
 author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
@@ -9,10 +9,16 @@ March 28th, 2017
 
 \pagebreak
 
+\linespread{2}
+
+\selectfont
+
 Speech Buddy Project
 ====================
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
+
+test[@1234]
 
 Declaration of Joint Authorship
 ===============================

@@ -302,6 +302,8 @@ Example](#database-alteration-via-user-case-examples)
 
 7.3.3 [DynamoDB Database](#dynamoDB-database)
 
+7.3.4 [Lambda Web Service](#lambda-web-service)
+
 ### 7.4 [Construction](#construction)
 
 7.4.1 [Construction Introduction](#construction-introduction)
@@ -746,6 +748,14 @@ an Amazon Web Service that allows for the create of tables for data storage, and
 manipulation. Service is free only if data being written to it is not over a
 certain capacity ans size. Belongs to the same service and company as the Alexa
 voice service, allowing for easy integration of hardware and software.
+
+### Lambda Web Service
+
+Lambda is a service on the Amazon Web Service website for creating Alexa Skills.
+Using this we can create custom functionalities to install on to the Raspberry
+Pi. Service allows for multiple code languages, such as JavaScript, Python,
+NodeJS and many others. The variety in coding languages can allow for coding in
+a language we are familiar in.
 
 Construction
 ============

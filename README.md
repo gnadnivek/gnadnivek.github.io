@@ -343,7 +343,7 @@ Application](#additional-amazon-account-configuration-for-android-application)
 
 7.5.7.2 [Cognito Identity](#cognito-identity)
 
-7.5.7.3 [IAM Roles](#iAM-roles)
+7.5.7.3 [IAM Roles](#iam-roles)
 
 7.5.7.4 [Customizable/Local Installation](#customizablelocal-installation)
 

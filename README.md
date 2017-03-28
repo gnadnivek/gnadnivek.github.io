@@ -377,11 +377,13 @@ Objective
 ---------
 
 The objective of this project is to create a usable voice interface that will
-help people with organization and planning. In this current age of time a mobile
+help people with organization and planning. Having the ability to help manage
+tasks and improve the users planning and scheduling efficiently. Similar to
+Apple’s Siri and Microsoft's Cortana.  In this current age of time a mobile
 phone is carried everywhere and used 24/7. We want to utilize this aspect to
-create a unique interface with a virtual voice to help others in planning. If a
-piece of technology is with people the majority of the time, why not use that
-technology in an effort to help them.
+create a unique interface with a virtual voice to improve the users planning
+skills. If a piece of technology is constantly with people the majority of the
+time, why not use that technology in an effort to help them.
 
 Technical Problem
 -----------------
@@ -390,16 +392,18 @@ The problem solved by this project is that it helps users take simple notes,
 such as a grocery list or small reminders for when you don’t have a pen and
 paper available. This project will help solve problems where people forget an
 important detail or appointment, by storing what the user says into a readable
-text format.
+text format. Having the ability to bring up that stored information anywhere the
+user is current located.
 
 Some problems that were encountered in constructing the Speech Buddy, was trying
 to convert spoken words into text on the Raspberry Pi. We tackled this problem
-by first utilizing the “espeak” library on the Pi. This did not provide enough
-efficiency, until we discovered Amazon’s Alexa voice service. This voice service
-allowed us to create specific tasks for the voice to do, making it easier to
-program speech conversion, and database storage. Another problem was
-connectivity, the Alexa voice service requires internet access, we have a wired
-connection using an Ethernet cable. Portability is a big issue.
+by first utilizing the “espeak” library on the Raspberry Pi. This did not
+provide enough efficiency, until we discovered Amazon’s Alexa voice service.
+This voice service allowed us to create specific tasks for the voice to do,
+making it easier to program speech conversion, and database storage. Another
+problem was connectivity, the Alexa voice service requires internet access, we
+have a wired connection using an Ethernet cable. Portability is something to
+look further in to.
 
 \pagebreak
 
@@ -734,73 +738,79 @@ Construction
 When working on the speech Buddy project, we planned to incorporate an ability
 to create lists at the users’ request. This functionality in the voice interface
 will allow users to improve their organizational abilities, and help increase
-their planning, as well as scheduling. Throughout the duration of our build, we
-decided to use the Amazon Voice service, Alexa. This service provided the voice
-we needed for speech buddy. This voice service included basic functionally such
-as, being able to get the time, date, google information, by asking questions.
+their planning, as well as scheduling skills. Throughout the duration of our
+build, we decided to use the Amazon Voice service, Alexa. This service provided
+the voice we needed for speech buddy. This voice service included basic
+functionally such as, being able to get the time, date, google information, by
+asking questions.
 
 By using Alexa skills we were able to create specific functionalities for the
 speech Buddy. This provided an Integrated Development Environment (IDE) to begin
-coding for the List creating skill.
+coding for the List creating skill we would be developing.
 
 The data being inputted by the user was kept in external database online, we
-incorporated the Amazon Web Service (AWS), DynamoDB. Using this service with the
-Alexa skill we were creating allowed us to take user voice input, and store
-online.
+incorporated the Amazon Web Service (AWS), DynamoDB database. Using this service
+with the Alexa skill we were creating, allowed us to take user voice input, and
+store that information online in tables.
 
 ### Alexa Skill
 
 On the Amazon Web Services (AWS) we used a service known as, Lambda. This
 service was the foundation of the List creating skill. Providing an Integrated
-Development Environment (IDE) to begin coding. Following a several tutorials
-found online for using the Lambda service we managed to understand and learn how
-to utilize Lambda for our Alexa Skill. The tutorials used are located
+Development Environment (IDE) to begin coding. Following several tutorials found
+online for using the Lambda service we managed to understand and learn how to
+utilize Lambda for our Alexa Skill. The tutorials used are located
 [here](https://github.com/CWolfAnderson/amazon-alexa-with-firebase) and
 [here](https://hackernoon.com/my-first-alexa-custom-skill-6a198d385c84#.w06s23fd6).
 Creating the Lambda Skill was done, but the difficult portion was trying to
-actually installing the Lambda skill on to the Voice service Alexa. Following
-the tutorial we went to our Amazon Developer account to add a skill, this
-required an intent schema and a sample utterances. These two requirements proved
-difficult, needing a complete code to work. For this we used a basic Lambda
-skill that the AWS lambda service provided on the website. Using that sample
-skill we were able to install skills onto the Raspberry Pi with Alexa.
+actually install the Lambda skill on to the Voice service Alexa. Following the
+tutorial we went to our Amazon Developer account to add a skill, this required
+an intent schema and a sample utterances. The intent schema and sample
+utterances provide the Alexa skill code with knowledge on what section of code
+to run, when a specific phrase or sentence is heard. These two requirements
+proved difficult, needing a complete code to help use understand and learn about
+them. For this we used a basic Lambda skill that the AWS lambda service provided
+on the website. Using the sample skill, Color (this is discussed late the the
+Technical Report), we were able to install skills onto the Raspberry Pi with
+Alexa.
 
 We started coding the skill using Python. Connection to the database proved
-simple with just 3 lines of code, and adding permissions. Main goal was
-developing code for adding and deleting data in the DynamoDB database. Adding
-and deleting codes were done in methods, so they can be easily utilized anywhere
-in the code
+simple with just 3 lines of code, and adding permissions for the DynamoDB web
+service. Main goal was developing code for adding and deleting data in the
+DynamoDB database. Adding and deleting codes were completed in methods, so they
+can be easily utilized anywhere in the code.
 
 ### Creating the Database
 
 Creation of the database was simple on the AWS website, navigating the DynamoDB
 page to create two separate tables. A table called, ListNames with a column for
-the Name. A table called, ItemNames with the columns for, Item name and list
-name. Using a second table with two columns including item name and list name,
-allowed for the minimization of tables we needed. This also allowed us to
-reference different items depending on the list the user placed it in. With this
-we created an external database to house the data users inputted.
+the Name of a list. A table called, ItemNames with the columns for, Item name
+and list name. Using a second table with two columns including item name and
+list name, allowed for the minimization of tables we needed. This also allowed
+us to reference different items depending on the list the user placed it in.
+With this we created an external database to house the data users inputted.
 
 Connection to the database was required for us to manipulate the values users
 inputted. Both the hardware and software portions of the Speech Buddy project
-was to be connect to the same external database, DynamoDB. The Alexa Skill we
-were implementing requires the use of the Lambda web Service. This web service
-utilized a policy will every skill created. The policy allows for other web
-services, such as DynamoDB to access the skill and also grant permissions to the
-person using the Alexa skill. To connect to skill to the online database, we
-included the DynamoDB permissions to the policy. To fully utilize the ability of
-the DynamoDB database we imported the “boto3” library in the Alexa skill python
-code. This library and class allowed us to use built-in functions to access and
-manipulate the tables located in the database.  
+was to be connect to the same external database, DynamoDB, allowing for both
+pieces to be fully integrated together. The Alexa Skill we were implementing
+requires the use of the Lambda web Service. This web service utilized a policy
+will every skill created. The policy allows for other web services, such as
+DynamoDB to access the skill and also grant permissions to the person using the
+Alexa skill. To connect to skill to the online database, we included the
+DynamoDB permissions to the policy. To fully utilize the ability of the DynamoDB
+database we imported the “boto3” library in the Alexa skill python code. This
+library and class allowed us to use built-in functions to access and manipulate
+the tables located in the database.  
 
 ### Adding
 
 Code for adding user input required many things. An entire in the intent schema,
 utterances, and code were required. Tutorials mentioned above included sample
 code of adding information into the database. We developed our own Python code
-for adding data using the sample code as a base
+for adding data, using the sample code as a base.
 
-Code for adding:
+Code for Adding a List:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def insert_ListNames(listName):
@@ -813,12 +823,23 @@ def insert_ListNames(listName):
     return None
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This code required an entire in intent schema, so the skill was aware when to
+run the ADDING code. The intent schema would run a specific part of the code
+when the user inputs a particular phrase or sentence specified in the sample
+utterances. For example, the user might say “Speech Buddy add {ListName} list”.
+The “{ListName}” being a variable that the user says, such as “groceries”,
+“workout”, or “exams”.
+
+Testing this ADDING code proved successful on the Raspberry Pi as well as on the
+Amazon develop website.
+
 ### Deleting
 
-The Deleting code was simple after completing the ADDING portion of the code.
-Again requirements in both the intent schema and sample utterances was needed.
+The Deleting code was simple after completing the ADDING functionality of the
+code. Again requirements in both the intent schema and sample utterances was
+needed.
 
-Code for Deleting:
+Code for Deleting a List:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def delete_listNames(listName):      
@@ -832,13 +853,7 @@ def delete_listNames(listName):
     return None
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This code required an entire in intent schema, so the skill was aware when to
-run the ADDING code. The intent schema would run a specific part of the code
-when the user inputs a particular phrase specified on the sample utterances.
-Such as “Speech Buddy add grocery list”
-
-Testing this ADDING code proved successful on the Raspberry Pi as well as on the
-Amazon develop website.
+ 
 
 ### Error Checking
 

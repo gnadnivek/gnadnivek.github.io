@@ -342,7 +342,7 @@ Example](#database-alteration-via-user-case-examples)
 
 7.5.7.3 [The Speech Buddy Application](#the-speech-buddy-application)
 
-7.5.8 [Power Up and Testing](#power-up-and-testing)
+### 7.5.8 [Power Up and Testing](#power-up-and-testing)
 
 7.5.8.1 [Speech Buddy Application Directions and
 Controls](#speech-buddy-application-directions-and-controls)
@@ -355,12 +355,14 @@ Controls](#speech-buddy-application-directions-and-controls)
 
 ### 7.6 [Progress Reports](#progress-reports)
 
-7.6.1 [Status Report](#status-report---sent-by-sanjay-jerad-02142017)
+7.6.1 [Previous Year Work 2016](#previous-year-work-2016)
 
-7.6.2 [Integration
+7.6.2 [Status Report](#status-report---sent-by-sanjay-jerad-02142017)
+
+7.6.3 [Integration
 Report](#integration-report---sent-by-william-anderson-03072017)
 
-7.6.3 [Troubleshoot Report](#troubleshoot-report---sent-by-kevin-dang-03212017)
+7.6.4 [Troubleshoot Report](#troubleshoot-report---sent-by-kevin-dang-03212017)
 
 ### 8. [Conclusion](#conclusion)
 
@@ -1327,6 +1329,106 @@ developer-amazon-com and developer-amazon-web.
 
 Progress Reports
 ================
+
+Previous Year Work 2016
+-----------------------
+
+**Week 2:**
+
+During this week, we made our groups and also discussed about what we wanted to
+do for our project together, after deciding the project we went on to create a
+team name (The Arrested Developers) and how we are going to create the project
+with what materials/or code that we are going to use to get this to work. The
+project we decided was speech buddy that would use the amazon voice services and
+a server to allow us to say things and it be saved to a server for storage or
+removal.
+
+**Week 3:**
+
+In the software projects class, we had to make an android app that would allows
+us to add contents to the list and allow it to be saved on to a server. So, we
+could create a list of headings but also allow us to name it with a specific
+category name. Once this is done we can create thing for it to go into the
+specific category that you want to put it into.
+
+**Week 4:**
+
+During this week, we started to work on the code for the app that we are
+building for our project. The program that we are using is the android studio
+program that will allow us to create the app creating the java code and the xml
+files that will have the string file and the xml file that will allow us to
+create the pages that you will view on the app by building the page to the
+standards that are required.
+
+**Week 5:**
+
+Starting from week 5 we have purchased our components that will be need to build
+our product is buy buying the speakers the USB adapter and the mic that will be
+arriving in the following weeks. Including to this report for that week we have
+prof of purchase on our GitHub.
+
+**Week 7:**
+
+During this week, we had to present the beta part of the Speech Buddy app to the
+software projects advisor. And see where we need ti do better in for the app to
+be successful for the long run.
+
+**Week 8:**
+
+We make a placard that would be used for the open house or any other
+presentation. The placard would include the description and the specifications
+to what we needed and having our names illustrated onto the side of the placard
+saying who made the project.
+
+**Week 9:**
+
+We made a build video that have use put the components together an then show it
+running in the first 30 seconds of the video. This video should show what
+material we used and the where they were put in order for then to work.
+
+**Week 10:**
+
+Speech buddy will be shown at the open house on Saturday. It is currently
+capable of speaking through a combination of a text to speech python library,
+E-speak software, sound configuration file edits and self implemented code. The
+next step that we are working on will be to implement its speech to text
+capabilities to receive input through the microphone.
+
+**Week 11:**
+
+Speech buddy was shown at the open house, however without audio input a there
+were complications with the microphone. A keyboard was substituted to imitate
+voice input, but real voice input MUST be implemented by the next week. A new
+microphone has arrived after placing a new order for a small and better mic,
+with this we should be able to successfully record voice input for
+interpretation on the speech buddy. After we have achieved voice input, out
+project will have a working sensor(voice), working hardware, and a working
+model, thus making us prepared for the next course (Systems Project).
+
+**Week 12:**
+
+After running the Alexa voice service guide on how to get it to work with the
+voice input that it has, speech buddy is now accepting voice input using the
+same libraries as the amazon Alexa. We have removed the wake word dependencies
+so we can create our own skills and code for an Independent Speech Buddy
+platform. It will use already existing libraries to perform basic activities,
+such as querying google, addition, current time, etc. We are incorporating our
+skills (Calendars, list) currently. We are finally caught up to the project plan
+after have issues with the mice, and now preparing for the presentation of the
+fully working prototype of speech Buddy. Our budget has changed however, as we
+had to purchase a new USB microphone for 14.99. Having purchased the new mic, we
+are not going to be needing usb sound card that slits the audio and mic to
+separate ports, thus it will not be included in the budget of prospective
+builders of speech buddy. Aside form the microphone issue, which was
+successfully resolved, no major obstacles were encountered and the project took
+a great step forward this week.
+
+**Week 13:**
+
+After encountering some issues and then solving them from the previous week we
+are ready to present our presentation to our colleague on what we did for those
+weeks and show how the prototype works and demonstrate it to other to have then
+participate by trying it out.
 
 Status Report - sent by Sanjay Jerad [02/14/2017]
 -------------------------------------------------
